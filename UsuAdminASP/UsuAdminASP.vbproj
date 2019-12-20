@@ -46,11 +46,29 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -92,8 +110,16 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Argazkiak\01_SartuBezeroa.jpg" />
+    <Content Include="Argazkiak\02_DataBaseGehitu.png" />
+    <Content Include="Argazkiak\02_zerEgin.jpg" />
+    <Content Include="Argazkiak\02_Bilatu.png" />
+    <Content Include="Argazkiak\03_BilatuOstatua.jpg" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="01_SartuBezeroa.aspx" />
+    <Content Include="02_zerEgin.aspx" />
+    <Content Include="03_GehituOstatua.aspx" />
+    <Content Include="03_BilatuOstatua.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -115,11 +141,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="01_SartuBezeroa.aspx.designer.vb">
+      <DependentUpon>01_SartuBezeroa.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="01_SartuBezeroa.aspx.vb">
+      <DependentUpon>01_SartuBezeroa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="02_zerEgin.aspx.designer.vb">
+      <DependentUpon>02_zerEgin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_zerEgin.aspx.vb">
+      <DependentUpon>02_zerEgin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="03_GehituOstatua.aspx.designer.vb">
+      <DependentUpon>03_GehituOstatua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_GehituOstatua.aspx.vb">
+      <DependentUpon>03_GehituOstatua.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="03_BilatuOstatua.aspx.designer.vb">
+      <DependentUpon>03_BilatuOstatua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_BilatuOstatua.aspx.vb">
+      <DependentUpon>03_BilatuOstatua.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
