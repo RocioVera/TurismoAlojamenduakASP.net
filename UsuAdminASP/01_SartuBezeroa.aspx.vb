@@ -26,7 +26,7 @@ Public Class WebForm1
             'Konexioarekin komandoa egin
             Dim cmd1 = cnn1.CreateCommand()
             'SQL komandoa
-            cmd1.CommandText = "SELECT nan, pasahitza FROM Erabiltzaileak WHERE nan = @user AND pasahitza=MD5(@pass) AND baimena=1"
+            cmd1.CommandText = "SELECT nan, pasahitza FROM Erabiltzaileak WHERE nan = @user AND pasahitza=MD5(@pass)"
             'Erabiltzaile eremuko textua parametro bezala jarri
             cmd1.Parameters.AddWithValue("@user", Me.txtBezeroa.Text)
             'Pasahitza eremuko textua parametro bezala jarri

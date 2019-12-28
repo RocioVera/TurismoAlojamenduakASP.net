@@ -23,15 +23,6 @@ Partial Public Class WebForm2
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control LblTitulua.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents LblTitulua As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''Control btnGehituOstatua.
     '''</summary>
     '''<remarks>
@@ -39,6 +30,15 @@ Partial Public Class WebForm2
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnGehituOstatua As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''Control lblGehitu.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblGehitu As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control btnBilatuOstatua.
@@ -50,11 +50,11 @@ Partial Public Class WebForm2
     Protected WithEvents btnBilatuOstatua As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''Control lblEgileak.
+    '''Control lblBilatu.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblEgileak As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblBilatu As Global.System.Web.UI.WebControls.Label
 End Class

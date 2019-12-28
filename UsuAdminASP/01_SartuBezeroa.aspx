@@ -30,8 +30,8 @@
         }
         .auto-style8 {
             position: absolute;
-            top: 17%;
-            left: 36%;
+            top: 16%;
+            left: 33%;
             height: 165px;
             width: 392px;
         }
@@ -43,8 +43,6 @@
 </head>
 <body style ="background-image:url(Argazkiak/01_SartuBezeroa.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
     <form id="form1" runat="server">
-        <div>
-        </div>
         <div id="loginLaukia" style="align-content: center center;
                 text-align: center center;
                 margin: auto;
@@ -77,6 +75,5 @@
     </div>
       </div>
     </form>
-    <p> &nbsp;</p>
 </body>
 </html>

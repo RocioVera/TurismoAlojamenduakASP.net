@@ -100,18 +100,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm2._LblTitulua">
+<member name="F:UsuAdminASP.WebForm2._btnGehituOstatua">
 <summary>
-Control LblTitulua.
+Control btnGehituOstatua.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm2._btnGehituOstatua">
+<member name="F:UsuAdminASP.WebForm2._lblGehitu">
 <summary>
-Control btnGehituOstatua.
+Control lblGehitu.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -127,9 +127,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm2._lblEgileak">
+<member name="F:UsuAdminASP.WebForm2._lblBilatu">
 <summary>
-Control lblEgileak.
+Control lblBilatu.
 </summary>
 <remarks>
 Campo generado automáticamente.
