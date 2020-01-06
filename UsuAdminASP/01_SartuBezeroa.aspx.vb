@@ -11,7 +11,14 @@ Public Class WebForm1
     Dim komando As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim data As New DataSet
+    'objetua sortu
+    Dim bezeroObj As New Bezeroa
 
+    Public ReadOnly Property BezeroaHartu As Bezeroa
+        Get
+            Return bezeroObj
+        End Get
+    End Property
 
     Protected Sub btnSartu_Click(sender As Object, e As EventArgs) Handles btnSartu.Click
         Dim bezeroa As String
@@ -26,7 +33,7 @@ Public Class WebForm1
             'Konexioarekin komandoa egin
             Dim cmd1 = cnn1.CreateCommand()
             'SQL komandoa
-            cmd1.CommandText = "SELECT nan, pasahitza FROM Erabiltzaileak WHERE nan = @user AND pasahitza=MD5(@pass)"
+            cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=MD5(@pass)"
             'Erabiltzaile eremuko textua parametro bezala jarri
             cmd1.Parameters.AddWithValue("@user", Me.txtBezeroa.Text)
             'Pasahitza eremuko textua parametro bezala jarri
@@ -37,23 +44,31 @@ Public Class WebForm1
             das1 = cmd1.ExecuteReader()
             'Lerroak (datuak) badaude
             If das1.HasRows() Then
-                If das1.HasRows() Then
-                    'MsgBox("Datu zuzenak")
-                    'erabiltzaile + pasahitza zuzenak badira kudeaketa lehiora joango da
-                    Response.Redirect("02_zerEgin.aspx")
-                Else
-                    'Errore mezua
-                    MsgBox("Datu okerrak")
-                End If
+                While das1.Read()
+                    Dim bez As New Bezeroa(das1.GetInt32(0), das1.GetString(1), das1.GetString(2), das1.GetInt32(3), das1.GetString(4), das1.GetInt32(5))
+                    bezeroObj = bez
+                    If (bez.baimena = 0) Then 'superAdmin
+                        MsgBox("Baimena superAdmin:" & bez.baimena)
+                        Response.Redirect("02_zerEgin.aspx")
+                    ElseIf (bez.baimena = 1) Then 'ostatu administratzaileak
+                        MsgBox("Baimena Administratzaileak:" & bez.baimena)
+                    ElseIf (bez.baimena = 2) Then 'gonbidatuak
+                        MsgBox("Baimena gonbidatuak:" & bez.baimena)
+                        Response.Redirect("03_BilatuOstatua.aspx")
+                    ElseIf (bez.baimena = 3) Then ' bezeronormala
+                        MsgBox("Baimena bezero normala:" & bez.baimena)
+                        Response.Redirect("03_BilatuOstatua.aspx")
+                    End If
+                End While
             Else
                 'Errore mezua
                 MsgBox("Datu okerrak")
             End If
+
         Catch ex As Exception
             'Konexioa itxi
             cnn1.Close()
             'Errore mezua
-            MsgBox("Datu okerrak")
         End Try
     End Sub
 

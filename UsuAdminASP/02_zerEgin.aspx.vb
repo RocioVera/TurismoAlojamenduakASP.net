@@ -2,6 +2,8 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim bezeroObj As New Bezeroa
+        MsgBox("Baimena superAdmin:" & bezeroObj.erabil_izena)
 
     End Sub
 

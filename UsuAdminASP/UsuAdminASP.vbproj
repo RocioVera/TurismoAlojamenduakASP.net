@@ -122,6 +122,7 @@
     <Content Include="03_BilatuOstatua.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bezeroa.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

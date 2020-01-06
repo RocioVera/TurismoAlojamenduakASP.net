@@ -14,33 +14,36 @@
 
             <br />
             <br />
-            <asp:Button ID="atzeraBtn" runat="server" Text="Atzera" Width="76px" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:ImageButton ID="ImageButton1" runat="server" Height="30px" ImageUrl="~/Argazkiak/atzera.png" Width="65px" />
+            <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblBilatu" runat="server" Font-Bold="False" Font-Italic="True" Font-Names="Franklin Gothic Medium Cond" Font-Size="30pt" ForeColor="#000099" Text="Bilaketa"></asp:Label>
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
             <br />
-            <asp:TextBox ID="txtIzena" runat="server" Width="301px"></asp:TextBox>
             &nbsp;
-        <asp:DropDownList ID="ddlMota" runat="server" Height="16px" Width="157px" AutoPostBack="True">
+        <asp:DropDownList ID="ddlMota" runat="server" Height="33px" Width="128px" AutoPostBack="True">
             <asp:ListItem>Mota</asp:ListItem>
             <asp:ListItem>Aterpetxea</asp:ListItem>
             <asp:ListItem>Kanping</asp:ListItem>
             <asp:ListItem>Landetxea</asp:ListItem>
             <asp:ListItem>Nekazaritza-turismoa</asp:ListItem>
         </asp:DropDownList>
-            &nbsp;
-        <asp:DropDownList ID="ddlProbintzia" runat="server" AutoPostBack="True" Width="145px">
+            &nbsp;&nbsp;
+            <asp:TextBox ID="txtIzena" runat="server" Width="301px"></asp:TextBox>
+            &nbsp;&nbsp;
+        <asp:DropDownList ID="ddlProbintzia" runat="server" AutoPostBack="True" Width="147px" Height="28px">
             <asp:ListItem>Probintzia</asp:ListItem>
             <asp:ListItem>Araba</asp:ListItem>
             <asp:ListItem>Bizkaia</asp:ListItem>
             <asp:ListItem>Gipuzkoa</asp:ListItem>
         </asp:DropDownList>
             &nbsp;
-        <asp:DropDownList ID="ddlHerria" runat="server" AutoPostBack="True" Width="150px" Height="16px">
+            &nbsp;
+        <asp:DropDownList ID="ddlHerria" runat="server" AutoPostBack="True" Width="151px" Height="16px">
             <asp:ListItem>Herriak</asp:ListItem>
         </asp:DropDownList>
+            &nbsp;
             &nbsp;
         <asp:ImageButton ID="imagebuttonbilatu" runat="server" Height="24px" ImageUrl="~/Argazkiak/02_Bilatu.png" Width="22px" />
             <br />
@@ -48,7 +51,7 @@
             <asp:GridView ID="GridViewDatuak" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="96px" PageSize="25" Width="1000px" AllowPaging="True" EmptyDataText="Zuk filtratutakoekin ez daude ostaturik erakusteko, aldatu eta barkatu eragozpenak" Style="margin-left: 0px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" SelectText="Hautatu ostatua hau"/>
+                    <asp:CommandField ShowSelectButton="True" SelectText="Erreserbatu"/>
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
