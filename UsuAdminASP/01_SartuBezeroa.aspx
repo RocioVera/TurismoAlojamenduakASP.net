@@ -1,6 +1,13 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="01_SartuBezeroa.aspx.vb" Inherits="UsuAdminASP.WebForm1" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs)
+
+    End Sub
+</script>
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
