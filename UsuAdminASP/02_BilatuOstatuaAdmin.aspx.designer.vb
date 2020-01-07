@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm4
+Partial Public Class WebForm2
 
     '''<summary>
     '''Control form1.

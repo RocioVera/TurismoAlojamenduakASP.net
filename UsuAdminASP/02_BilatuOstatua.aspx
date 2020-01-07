@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="02_BilatuOstatua.aspx.vb" Inherits="UsuAdminASP.WebForm4" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="02_BilatuOstatua.aspx.vb" Inherits="UsuAdminASP.WebForm6" %>
 
 <!DOCTYPE html>
 
@@ -6,15 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 1079px;
-            height: 840px;
-        }
-    </style>
 </head>
 <body style ="background-image:url(Argazkiak/03_BilatuOstatua.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
-    
     <form id="form1" runat="server">
         <div id="bilaketalbl" style="justify-content: center; align-items: center; margin: 0 auto; justify-content: center; align-content: center center" class="auto-style1">
             <br />

@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class WebForm4
+
+Public Class WebForm2
     Inherits System.Web.UI.Page
     'Datu basearen datuak
     Dim server As String = "server=localhost;user=root;database=3262035_ostatuagrad;port=3306;"
@@ -140,7 +141,6 @@ Public Class WebForm4
 
         End Try
     End Sub
-
     Protected Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
         Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
