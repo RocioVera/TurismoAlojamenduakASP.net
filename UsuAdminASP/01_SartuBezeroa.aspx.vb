@@ -49,15 +49,15 @@ Public Class WebForm1
                     bezeroObj = bez
                     If (bez.baimena = 0) Then 'superAdmin
                         MsgBox("Baimena superAdmin:" & bez.baimena)
-                        Response.Redirect("02_zerEgin.aspx")
+                        Response.Redirect("02_BilatuOstatuaAdmin.aspx")
                     ElseIf (bez.baimena = 1) Then 'ostatu administratzaileak
                         MsgBox("Baimena Administratzaileak:" & bez.baimena)
                     ElseIf (bez.baimena = 2) Then 'gonbidatuak
                         MsgBox("Baimena gonbidatuak:" & bez.baimena)
-                        Response.Redirect("03_BilatuOstatua.aspx")
+                        Response.Redirect("02_BilatuOstatua.aspx")
                     ElseIf (bez.baimena = 3) Then ' bezeronormala
                         MsgBox("Baimena bezero normala:" & bez.baimena)
-                        Response.Redirect("03_BilatuOstatua.aspx")
+                        Response.Redirect("02_BilatuOstatua.aspx")
                     End If
                 End While
             Else
@@ -68,11 +68,6 @@ Public Class WebForm1
         Catch ex As Exception
             'Konexioa itxi
             cnn1.Close()
-            'Errore mezua
         End Try
-    End Sub
-
-    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-
     End Sub
 End Class

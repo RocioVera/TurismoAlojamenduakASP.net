@@ -141,7 +141,7 @@ Public Class WebForm4
         End Try
     End Sub
 
-    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
-
+    Protected Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
+        Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
 End Class

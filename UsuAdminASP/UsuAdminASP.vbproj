@@ -110,6 +110,8 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="02_BilatuOstatuaAdmin.aspx" />
+    <Content Include="02_GehituOstatuaAdmin.aspx" />
     <Content Include="Argazkiak\01_SartuBezeroa.jpg" />
     <Content Include="Argazkiak\02_DataBaseGehitu.png" />
     <Content Include="Argazkiak\02_zerEgin.jpg" />
@@ -117,11 +119,24 @@
     <Content Include="Argazkiak\03_BilatuOstatua.jpg" />
     <Content Include="Web.config" />
     <Content Include="01_SartuBezeroa.aspx" />
-    <Content Include="02_zerEgin.aspx" />
-    <Content Include="03_GehituOstatua.aspx" />
-    <Content Include="03_BilatuOstatua.aspx" />
+    <Content Include="02_GehituOstatua.aspx" />
+    <Content Include="02_BilatuOstatua.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="02_BilatuOstatuaAdmin.aspx.designer.vb">
+      <DependentUpon>02_BilatuOstatuaAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_BilatuOstatuaAdmin.aspx.vb">
+      <DependentUpon>02_BilatuOstatuaAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="02_GehituOstatuaAdmin.aspx.designer.vb">
+      <DependentUpon>02_GehituOstatuaAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02_GehituOstatuaAdmin.aspx.vb">
+      <DependentUpon>02_GehituOstatuaAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Bezeroa.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -149,25 +164,18 @@
       <DependentUpon>01_SartuBezeroa.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="02_zerEgin.aspx.designer.vb">
-      <DependentUpon>02_zerEgin.aspx</DependentUpon>
+    <Compile Include="02_GehituOstatua.aspx.designer.vb">
+      <DependentUpon>02_GehituOstatua.aspx</DependentUpon>
     </Compile>
-    <Compile Include="02_zerEgin.aspx.vb">
-      <DependentUpon>02_zerEgin.aspx</DependentUpon>
+    <Compile Include="02_GehituOstatua.aspx.vb">
+      <DependentUpon>02_GehituOstatua.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="03_GehituOstatua.aspx.designer.vb">
-      <DependentUpon>03_GehituOstatua.aspx</DependentUpon>
+    <Compile Include="02_BilatuOstatua.aspx.designer.vb">
+      <DependentUpon>02_BilatuOstatua.aspx</DependentUpon>
     </Compile>
-    <Compile Include="03_GehituOstatua.aspx.vb">
-      <DependentUpon>03_GehituOstatua.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="03_BilatuOstatua.aspx.designer.vb">
-      <DependentUpon>03_BilatuOstatua.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="03_BilatuOstatua.aspx.vb">
-      <DependentUpon>03_BilatuOstatua.aspx</DependentUpon>
+    <Compile Include="02_BilatuOstatua.aspx.vb">
+      <DependentUpon>02_BilatuOstatua.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
