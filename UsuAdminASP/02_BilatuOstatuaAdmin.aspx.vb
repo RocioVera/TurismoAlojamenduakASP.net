@@ -142,6 +142,21 @@ Public Class WebForm2
         End Try
     End Sub
     Protected Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
-        Response.Redirect("02_BilatuOstatua.aspx")
+        Response.Redirect("02_GehituOstatua.aspx")
+    End Sub
+
+    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
+        Response.Redirect("01_SartuBezeroa.aspx")
+    End Sub
+
+    Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
+        MsgBox("Value:" & GridViewDatuak.SelectedIndex)
+        ' Dim a = GridViewDatuak.cu
+
+
+        Response.Redirect("03_EditatuOstatuaAdmin.aspx")
+
+        ' Session("pp") = 
+        ' https://www.youtube.com/watch?v=qKcg9eCBh0M
     End Sub
 End Class

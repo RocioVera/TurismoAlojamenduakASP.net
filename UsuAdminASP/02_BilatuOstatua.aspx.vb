@@ -145,5 +145,3 @@ Public Class WebForm6
         Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
 End Class
-
-End Class

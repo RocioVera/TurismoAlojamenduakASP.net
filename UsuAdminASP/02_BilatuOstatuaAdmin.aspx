@@ -6,11 +6,17 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1002px;
+            height: 927px;
+        }
+    </style>
 </head>
 <body style ="background-image:url(Argazkiak/03_BilatuOstatua.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
     
     <form id="form1" runat="server">
-        <div id="bilaketalbl" style="justify-content: center; align-items: center; margin: 0 auto; justify-content: center; align-content: center center" class="auto-style1">
+        <div id="bilaketalbl" style="justify-content: center; align-items: center; margin: auto; justify-content: center; align-content: center center" class="auto-style1">
 
             <br />
             <br />
@@ -25,7 +31,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
             <br />
             &nbsp;
-        <asp:DropDownList ID="ddlMota" runat="server" Height="33px" Width="128px" AutoPostBack="True">
+        <asp:DropDownList ID="ddlMota" runat="server" Height="30px" Width="128px" AutoPostBack="True">
             <asp:ListItem>Mota</asp:ListItem>
             <asp:ListItem>Aterpetxea</asp:ListItem>
             <asp:ListItem>Kanping</asp:ListItem>
@@ -33,9 +39,9 @@
             <asp:ListItem>Nekazaritza-turismoa</asp:ListItem>
         </asp:DropDownList>
             &nbsp;&nbsp;
-            <asp:TextBox ID="txtIzena" runat="server" Width="301px"></asp:TextBox>
+            <asp:TextBox ID="txtIzena" runat="server" Width="299px" Height="27px"></asp:TextBox>
             &nbsp;&nbsp;
-        <asp:DropDownList ID="ddlProbintzia" runat="server" AutoPostBack="True" Width="147px" Height="28px">
+        <asp:DropDownList ID="ddlProbintzia" runat="server" AutoPostBack="True" Width="147px" Height="30px">
             <asp:ListItem>Probintzia</asp:ListItem>
             <asp:ListItem>Araba</asp:ListItem>
             <asp:ListItem>Bizkaia</asp:ListItem>
@@ -43,7 +49,7 @@
         </asp:DropDownList>
             &nbsp;
             &nbsp;
-        <asp:DropDownList ID="ddlHerria" runat="server" AutoPostBack="True" Width="151px" Height="16px">
+        <asp:DropDownList ID="ddlHerria" runat="server" AutoPostBack="True" Width="151px" Height="30px">
             <asp:ListItem>Herriak</asp:ListItem>
         </asp:DropDownList>
             &nbsp;
@@ -55,6 +61,7 @@
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" SelectText="Erreserbatu"/>
+                    <asp:CommandField ShowEditButton="True" SelectText="Editatu"/>
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

@@ -119,10 +119,11 @@
     <Content Include="01_SartuBezeroa.aspx" />
     <Content Include="02_GehituOstatua.aspx" />
     <Content Include="02_BilatuOstatuaAdmin.aspx" />
-    <Content Include="02_GehituOstatuaAdmin.aspx" />
+    <Content Include="03_EditatuOstatuaAdmin.aspx" />
     <Content Include="02_BilatuOstatua.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ostatua.vb" />
     <Compile Include="Bezeroa.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -164,11 +165,11 @@
       <DependentUpon>02_BilatuOstatuaAdmin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="02_GehituOstatuaAdmin.aspx.designer.vb">
-      <DependentUpon>02_GehituOstatuaAdmin.aspx</DependentUpon>
+    <Compile Include="03_EditatuOstatuaAdmin.aspx.designer.vb">
+      <DependentUpon>03_EditatuOstatuaAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="02_GehituOstatuaAdmin.aspx.vb">
-      <DependentUpon>02_GehituOstatuaAdmin.aspx</DependentUpon>
+    <Compile Include="03_EditatuOstatuaAdmin.aspx.vb">
+      <DependentUpon>03_EditatuOstatuaAdmin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="02_BilatuOstatua.aspx.designer.vb">

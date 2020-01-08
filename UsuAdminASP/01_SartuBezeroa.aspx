@@ -50,8 +50,8 @@
             position: absolute;
             top: 5%;
             left: 2%;
-            height: 62px;
-            width: 184px;
+            height: 66px;
+            width: 204px;
         }
     </style>
 </head>
