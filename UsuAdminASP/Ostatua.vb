@@ -5,7 +5,7 @@
     Private _latitude, _longitude As Double
 
     'kontruktorea
-    Public Sub New(idSignatura As Integer, ostatuIzena As String, deskribapena As String, ostatuHelbidea As String, marka As String,
+    Public Sub New(idSignatura As String, ostatuIzena As String, deskribapena As String, ostatuHelbidea As String, marka As String,
                    ostatuEmail As String, ostatuTelefonoa As String, pertsonaTot As Integer, latitude As Double, longitude As Double,
                    mota As String, webUrl As String, adiskidetsuUrl As String, zipUrl As String, postaKodea As Integer, herriKodea As String)
         Me.IdSignatura = idSignatura

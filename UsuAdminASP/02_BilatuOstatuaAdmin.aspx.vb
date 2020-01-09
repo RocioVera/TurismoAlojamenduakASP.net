@@ -11,10 +11,11 @@ Public Class WebForm2
     Dim komando As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim data As New DataSet
-
+    Dim sartutakoBezeroa As Bezeroa
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
+            sartutakoBezeroa = Session("sartutakoBezeroa")
             ProbintziaKargatu()
             HerriaGuztiakKargatu()
             taulaGehitu()
@@ -57,7 +58,7 @@ Public Class WebForm2
 
             Dim das1 As New DataSet
             Dim sql As String
-            sql = "SELECT DISTINCT(probintzia) FROM posta_kodeak ORDER BY probintzia"
+            sql = "SELECT DISTINCT(probintzia) FROM posta_kodeak"
 
             cnn1 = New MySqlConnection(server)
             cnn1.Open()
@@ -83,7 +84,7 @@ Public Class WebForm2
 
     Private Sub HerriaGuztiakKargatu()
         Dim sql As String
-        sql = "SELECT DISTINCT(herri_izena) FROM posta_kodeak ORDER BY herri_izena"
+        sql = "SELECT DISTINCT(herri_izena) FROM posta_kodeak"
         HerriDropDownGehitu(sql)
 
     End Sub
@@ -150,13 +151,18 @@ Public Class WebForm2
     End Sub
 
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
-        MsgBox("Value:" & GridViewDatuak.SelectedIndex)
-        ' Dim a = GridViewDatuak.cu
+        'MsgBox("Value:" & GridViewDatuak.SelectedIndex)
+        Session.Add("sartutakoBezeroa", sartutakoBezeroa)
+        Session.Add("hautatutakoOstatua", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
 
+        '        MsgBox(GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
 
         Response.Redirect("03_EditatuOstatuaAdmin.aspx")
 
-        ' Session("pp") = 
         ' https://www.youtube.com/watch?v=qKcg9eCBh0M
+    End Sub
+
+    Protected Sub ddlHerria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlHerria.SelectedIndexChanged
+
     End Sub
 End Class

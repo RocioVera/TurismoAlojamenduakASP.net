@@ -1,4 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.IO
+Imports System.Security.Cryptography
+
 Public Class WebForm1
     Inherits System.Web.UI.Page
 
@@ -11,20 +14,11 @@ Public Class WebForm1
     Dim komando As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim data As New DataSet
-    'objetua sortu
-    Dim bezeroObj As New Bezeroa
 
-    Public ReadOnly Property BezeroaHartu As Bezeroa
-        Get
-            Return bezeroObj
-        End Get
-    End Property
+    'objetua sortu
 
     Protected Sub btnSartu_Click(sender As Object, e As EventArgs) Handles btnSartu.Click
         Dim bezeroa As String
-        Dim pasahitza As String
-        bezeroa = txtBezeroa.Text.ToString
-        pasahitza = txtPasahitza.Text.ToString
         Try
             'Konexioa egin
             cnn1 = New MySqlConnection(server)
@@ -33,11 +27,11 @@ Public Class WebForm1
             'Konexioarekin komandoa egin
             Dim cmd1 = cnn1.CreateCommand()
             'SQL komandoa
-            cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=MD5(@pass)"
+            cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = MD5(@user) AND pasahitza=MD5(@pass)"
             'Erabiltzaile eremuko textua parametro bezala jarri
-            cmd1.Parameters.AddWithValue("@user", Me.txtBezeroa.Text)
+            cmd1.Parameters.AddWithValue("@user", Me.txtBezeroa.Text.ToString)
             'Pasahitza eremuko textua parametro bezala jarri
-            cmd1.Parameters.AddWithValue("@pass", Me.txtPasahitza.Text)
+            cmd1.Parameters.AddWithValue("@pass", Me.txtPasahitza.Text.ToString)
             'Lerro fluxuak irakurri
             Dim das1 As MySqlDataReader
             'Lerro fluxuen komandoa exekutatu
@@ -45,8 +39,11 @@ Public Class WebForm1
             'Lerroak (datuak) badaude
             If das1.HasRows() Then
                 While das1.Read()
-                    Dim bez As New Bezeroa(das1.GetInt32(0), das1.GetString(1), das1.GetString(2), das1.GetInt32(3), das1.GetString(4), das1.GetInt32(5))
-                    bezeroObj = bez
+
+                    'SALE TODO ENCRIPTADO PORQUE NO SE DESENCRIPTARLO
+                    Dim bez As New Bezeroa(das1.GetString(0), das1.GetString(1), das1.GetString(2), das1.GetInt32(3), das1.GetString(4), das1.GetString(5))
+                    Session.Add("sartutakoBezeroa", bez)
+
                     If (bez.baimena = 0) Then 'superAdmin
                         MsgBox("Baimena superAdmin:" & bez.baimena)
                         Response.Redirect("02_BilatuOstatuaAdmin.aspx")
@@ -71,7 +68,4 @@ Public Class WebForm1
         End Try
     End Sub
 
-    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-    End Sub
 End Class

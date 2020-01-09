@@ -144,4 +144,8 @@ Public Class WebForm6
     Protected Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
         Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
+
+    Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
+
+    End Sub
 End Class
