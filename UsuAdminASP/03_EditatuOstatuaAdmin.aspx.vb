@@ -64,9 +64,13 @@ Public Class WebForm5
     End Sub
 
     Private Sub gehituDatuak()
+        ' INSERT INTO `erabiltzaileak`(`NAN`, `ERABIL_IZENA`, `ABIZENAK`, `PASAHITZA`, `BAIMENA`, `ERABIL_EMAIL`, `ERABIL_TELEFONO`) VALUES (AES_ENCRYPT('12345675','12345'),'PUEBA','PRUEBA','12345',1,'PRUEBA@GMAIL.COM',123456789)
+        'SELECT AES_DECRYPT(PASAHITZA,'secreta') FROM `erabiltzaileak` WHERE NAN='78916507B'
+        ' INSERT INTO `erabiltzaileak`(`NAN`, `ERABIL_IZENA`, `ABIZENAK`, `PASAHITZA`, `BAIMENA`, `ERABIL_EMAIL`, `ERABIL_TELEFONO`) VALUES (AES_ENCRYPT('12312312', 'PRUEBA_NAN'), AES_ENCRYPT('PRUEBA', 'PRUEBA_IZENA'), AES_ENCRYPT('PRUEBA', 'PRUEBA_ABIZENA'), AES_ENCRYPT('PRUEBA', 'PRUEBA_PASAHITZA'), 1, AES_ENCRYPT('PRUEBA@GMAIL.COM', 'PRUEBA_EMAIL'),AES_ENCRYPT('123123152', 'PRUEBA_TELEFONO'))
         txtBxIdSignatura.Text = ostatua.IdSignatura
-        txtBxIzena.Text = ostatua.OstatuIzena
+        lblIzena.Text = ostatua.OstatuIzena
         txtBDeskribapena.Text = ostatua.Deskribapena
+
     End Sub
 
 

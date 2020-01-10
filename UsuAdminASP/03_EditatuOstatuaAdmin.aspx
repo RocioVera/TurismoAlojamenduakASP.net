@@ -10,10 +10,11 @@
 
         .auto-style8 {
             position: absolute;
-            top: 25%;
-            left: 14%;
+            top: 12%;
+            left: 5%;
             height: 327px;
-            width: 754px;
+            width: 1013px;
+            right: 240px;
         }
         
         .auto-style1 {
@@ -21,12 +22,12 @@
             height: 85px;
         }
         .auto-style2 {
-            width: 311px;
+            width: 170px;
             height: 40px;
             margin-left: 200px;
         }
         .auto-style6 {
-            width: 311px;
+            width: 170px;
             height: 42px;
             margin-left: 40px;
         }
@@ -38,39 +39,45 @@
 </head>
 <body style="background-image: url(Argazkiak/02_zerEgin.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
     <form id="form1" runat="server">
+        &nbsp;<br />
+        <div id="Titulua" style="text-align: center; font-family: 'Bodoni MT'; font-style: oblique; font-size: 50px; color: #000099;">
+           <asp:Label ID="lblIzena" runat="server" Font-Bold="True" Font-Italic="True"></asp:Label>
+        </div>
         <br />
-&nbsp;
-        <br />
-        <br />
-        &nbsp;
-        <br />
-        <br />
-        <br />
-        <div id="loginLaukia" style="align-content: center center; text-align: center center; margin: auto; background-color: #79553D; " class="auto-style8"  >
+        <div id="loginLaukia" style="align-content: center center; text-align: center center; margin: auto; background-color: #6BB1F8; " class="auto-style8"  >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">  
-                        <asp:Label ID="lblIdSignatura" runat="server" Text="Id signatura:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="#F8ECD4"></asp:Label>
+                        <asp:Label ID="lblIdSignatura" runat="server" Text="Id signatura:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
 &nbsp;&nbsp;&nbsp;
                         <asp:TextBox ID="txtBxIdSignatura" runat="server" Height="24px" Width="130px"></asp:TextBox>
                     &nbsp;&nbsp;
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                     </td>
-                    <td colspan="2" rowspan="2">
-                        <asp:Label ID="lblDeskribapena" runat="server" Text="Deskribapena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="#F8ECD4"></asp:Label>
+                    <td>
+                        <asp:Label ID="lblDeskribapena" runat="server" Text="Deskribapena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="txtBDeskribapena" runat="server" Height="123px" Width="403px"></asp:TextBox>
+                        <asp:TextBox ID="txtBDeskribapena" runat="server" Height="122px" Width="408px"></asp:TextBox>
+                        <br />
                     </td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style6">
-                        <asp:Label ID="lblIzena" runat="server" Text="Izena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="#F8ECD4"></asp:Label>
-                        <br />
-&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="txtBxIzena" runat="server" Height="25px" Width="132px"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style6">&nbsp;</td>

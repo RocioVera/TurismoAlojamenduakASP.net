@@ -244,6 +244,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:UsuAdminASP.WebForm5._lblIzena">
+<summary>
+Control lblIzena.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:UsuAdminASP.WebForm5._lblIdSignatura">
 <summary>
 Control lblIdSignatura.
@@ -274,24 +283,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:UsuAdminASP.WebForm5._txtBDeskribapena">
 <summary>
 Control txtBDeskribapena.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm5._lblIzena">
-<summary>
-Control lblIzena.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm5._txtBxIzena">
-<summary>
-Control txtBxIzena.
 </summary>
 <remarks>
 Campo generado automáticamente.

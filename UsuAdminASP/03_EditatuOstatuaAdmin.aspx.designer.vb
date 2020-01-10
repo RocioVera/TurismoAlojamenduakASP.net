@@ -23,6 +23,15 @@ Partial Public Class WebForm5
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control lblIzena.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblIzena As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control lblIdSignatura.
     '''</summary>
     '''<remarks>
@@ -57,22 +66,4 @@ Partial Public Class WebForm5
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtBDeskribapena As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control lblIzena.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblIzena As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control txtBxIzena.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtBxIzena As Global.System.Web.UI.WebControls.TextBox
 End Class
