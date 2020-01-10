@@ -32,10 +32,6 @@
             &nbsp;
         <asp:DropDownList ID="ddlMota" runat="server" Height="30px" Width="128px" AutoPostBack="True">
             <asp:ListItem>Mota</asp:ListItem>
-            <asp:ListItem>Aterpetxea</asp:ListItem>
-            <asp:ListItem>Kanping</asp:ListItem>
-            <asp:ListItem>Landetxea</asp:ListItem>
-            <asp:ListItem>Nekazaritza-turismoa</asp:ListItem>
         </asp:DropDownList>
             &nbsp;&nbsp;
             <asp:TextBox ID="txtIzena" runat="server" Width="299px" Height="27px"></asp:TextBox>

@@ -18,6 +18,7 @@ Public Class WebForm2
             sartutakoBezeroa = Session("sartutakoBezeroa")
             ProbintziaKargatu()
             HerriaGuztiakKargatu()
+            MotaGuztiakKargatu()
             taulaGehitu()
         End If
     End Sub
@@ -40,7 +41,37 @@ Public Class WebForm2
             dr = cmd1.ExecuteReader
 
             While dr.Read
-                ddlHerria.Items.Add(dr.Item(0))
+                If (dr.Item(0) <> "HUTSIK") Then
+                    ddlHerria.Items.Add(dr.Item(0))
+                End If
+            End While
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            cnn1.Close()
+        End Try
+
+    End Sub
+
+    Private Sub MotaDropDownGehitu(sql As String)
+        Try
+            ddlMota.Items.Clear()
+            'defektuzko balorea gehitzen da
+            ddlMota.Items.Add("Mota")
+            Dim das1 As New DataSet
+            cnn1 = New MySqlConnection(server)
+            cnn1.Open()
+
+            Dim cmd1 = New MySqlCommand(sql, cnn1)
+            Dim adap1 = New MySqlDataAdapter(cmd1)
+
+            das1.Clear()
+
+            Dim dr As MySqlDataReader
+            dr = cmd1.ExecuteReader
+
+            While dr.Read
+                ddlMota.Items.Add(dr.Item(0))
             End While
             dr.Close()
         Catch ex As Exception
@@ -72,7 +103,10 @@ Public Class WebForm2
             dr = cmd1.ExecuteReader
 
             While dr.Read
-                ddlProbintzia.Items.Add(dr.Item(0))
+                If (dr.Item(0) <> "HUTSIK") Then
+                    ddlProbintzia.Items.Add(dr.Item(0))
+                End If
+
             End While
             dr.Close()
         Catch ex As Exception
@@ -86,13 +120,25 @@ Public Class WebForm2
         Dim sql As String
         sql = "SELECT DISTINCT(herri_izena) FROM posta_kodeak"
         HerriDropDownGehitu(sql)
+    End Sub
 
+    Protected Sub MotaGuztiakKargatu()
+        Dim sql As String
+        sql = "SELECT DISTINCT(mota) FROM ostatuak"
+        MotaDropDownGehitu(sql)
     End Sub
 
     Protected Sub ddlProbintzia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlProbintzia.SelectedIndexChanged
         Dim sql As String
         sql = "SELECT DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA"
         HerriDropDownGehitu(sql)
+    End Sub
+
+
+    Protected Sub ddlMota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlMota.SelectedIndexChanged
+        Dim sql As String
+        sql = "SELECT DISTINCT(mota) FROM ostatuak WHERE upper(mota) Like upper('" & ddlMota.SelectedItem.Text.ToUpper & "') ORDER BY mota"
+        MotaDropDownGehitu(sql)
     End Sub
 
     Protected Sub imagebuttonbilatu_Click(sender As Object, e As ImageClickEventArgs) Handles imagebuttonbilatu.Click
@@ -142,6 +188,7 @@ Public Class WebForm2
 
         End Try
     End Sub
+
     Protected Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
         Response.Redirect("02_GehituOstatua.aspx")
     End Sub
@@ -163,6 +210,10 @@ Public Class WebForm2
     End Sub
 
     Protected Sub ddlHerria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlHerria.SelectedIndexChanged
+        If (ddlProbintzia.SelectedItem.Text = "Probintziak") Then
+            HerriaGuztiakKargatu()
+        End If
+        taulaGehitu()
 
     End Sub
 End Class

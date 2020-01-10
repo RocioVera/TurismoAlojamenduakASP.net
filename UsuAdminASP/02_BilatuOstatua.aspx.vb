@@ -148,4 +148,12 @@ Public Class WebForm6
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
 
     End Sub
+
+    Protected Sub ddlHerria_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Protected Sub ddlMota_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
