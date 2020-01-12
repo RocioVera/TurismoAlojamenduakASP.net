@@ -129,9 +129,13 @@ Public Class WebForm2
     End Sub
 
     Protected Sub ddlProbintzia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlProbintzia.SelectedIndexChanged
-        Dim sql As String
-        sql = "SELECT DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA"
-        HerriDropDownGehitu(sql)
+        If ddlProbintzia.SelectedItem.Text <> "Probintzia" Then
+            Dim sql As String
+            sql = "SELECT DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA"
+            HerriDropDownGehitu(sql)
+        Else
+            HerriaGuztiakKargatu()
+        End If
     End Sub
 
 
