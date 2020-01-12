@@ -76,7 +76,6 @@ Public Class WebForm5
         txtMarka.Text = ostatua.Marka
         txtTelefonoa.Text = ostatua.OstatuTelefonoa
         DDPertsonaTot.SelectedValue = ostatua.PertsonaTot
-        DDPertsonaTot.SelectedIndex = 20
 
         txtEmail.Text = ostatua.OstatuEmail
         txtMota.Text = ostatua.Mota
@@ -90,7 +89,93 @@ Public Class WebForm5
 
     End Sub
 
-    Protected Sub txtHelbidea0_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+    'Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
+
+    '    Try
+    '        'Konexioa egin
+    '        cnn1 = New MySqlConnection(server)
+    '        'Konexioa zabaldu
+    '        'Konexioarekin komandoa egin
+    '        Dim cmd1 = cnn1.CreateCommand()
+    '        'SQL komandoa
+
+    '        cmd1.CommandText = "UPDATE `ostatuak` SET `ostatu_izena`=@izena, `deskribapena`=@deskribapena, ostatu_helbidea=@helbidea,
+    '        `marka`=@marka,`ostatu_email`=@email, `ostatu_telefonoa`=@telefonoa, `pertsona_tot`=@pertsonaTot,latitude=@latitude,
+    '        `longitude`=@longitude, `mota`=@mota,`web_url`=@webUrl,`adiskidetsu_url`=@adiskidetsuUrl, `zip_url`=@zipUrl,
+    '        `posta_kodea`=@postaKodea, `herri_kodea`=@herriKodea WHERE `id_signatura` = @idSignatura"
+
+    '        'Erabiltzaile eremuko textua parametro bezala jarri
+    '        cmd1.Parameters.AddWithValue("@izena", txtIzena.Text.ToUpper)
+    '        cmd1.Parameters.AddWithValue("@deskribapena", txtBDeskribapena.Text.ToUpper)
+    '        cmd1.Parameters.AddWithValue("@helbidea", txtHelbidea.Text.ToUpper)
+    '        cmd1.Parameters.AddWithValue("@marka", txtMarka.Text.ToUpper)
+    '        cmd1.Parameters.AddWithValue("@email", txtEmail.Text)
+    '        cmd1.Parameters.AddWithValue("@telefonoa", txtTelefonoa.Text)
+    '        cmd1.Parameters.AddWithValue("@pertsonaTot", DDPertsonaTot.SelectedValue)
+    '        cmd1.Parameters.AddWithValue("@latitude", txtLatitudea.Text)
+    '        cmd1.Parameters.AddWithValue("@longitude", txtLongitudea.Text)
+    '        cmd1.Parameters.AddWithValue("@mota", txtMota.Text.ToUpper)
+    '        cmd1.Parameters.AddWithValue("@webUrl", txtWebUrl.Text)
+    '        cmd1.Parameters.AddWithValue("@adiskidetsuUrl", txtAdiskidetsuUrl.Text)
+    '        cmd1.Parameters.AddWithValue("@zipUrl", txtZipUrl.Text)
+    '        cmd1.Parameters.AddWithValue("@postaKodea", txtPostaKodea.Text)
+    '        cmd1.Parameters.AddWithValue("@herriKodea", txtHerriKodea.Text)
+    '        cmd1.Parameters.AddWithValue("@idSignatura", lblSignaturaID.Text)
+    '        MsgBox("exito")
+
+    '        cnn1.Open()
+
+    '        MsgBox("hecho")
+
+    '        'Lerro fluxuak irakurri
+    '        Dim das1 As mysq
+    '        'Lerro fluxuen komandoa exekutatu
+    '        das1 = cmd1.ExecuteNonQuery()
+    '        'Lerroak (datuak) badaude
+
+    '    Catch ex As Exception
+    '        'Konexioa itxi
+    '        cnn1.Close()
+    '        MsgBox(ex.Message)
+    '    End Try
+    'End Sub
+
+    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
+
+        Dim connection As New MySqlConnection(server)
+
+        Dim command As New MySqlCommand("UPDATE `ostatuak` SET `ostatu_izena`=@izena, `deskribapena`=@deskribapena, ostatu_helbidea=@helbidea,
+            `marka`=@marka,`ostatu_email`=@email, `ostatu_telefonoa`=@telefonoa, `pertsona_tot`=@pertsonaTot,latitude=@latitude,
+            `longitude`=@longitude, `mota`=@mota,`web_url`=@webUrl,`adiskidetsu_url`=@adiskidetsuUrl, `zip_url`=@zipUrl,
+            `posta_kodea`=@postaKodea, `herri_kodea`=@herriKodea WHERE `id_signatura` = @idSignatura", connection)
+
+        'Erabiltzaile eremuko textua parametro bezala jarri
+        command.Parameters.Add("@izena", MySqlDbType.VarChar).Value = txtIzena.Text.ToUpper
+        command.Parameters.Add("@deskribapena", MySqlDbType.VarChar).Value = txtBDeskribapena.Text.ToUpper
+        command.Parameters.Add("@helbidea", MySqlDbType.VarChar).Value = txtHelbidea.Text.ToUpper
+        command.Parameters.Add("@marka", MySqlDbType.VarChar).Value = txtMarka.Text.ToUpper
+        command.Parameters.Add("@email", MySqlDbType.VarChar).Value = txtEmail.Text
+        command.Parameters.Add("@telefonoa", MySqlDbType.VarChar).Value = txtTelefonoa.Text
+        command.Parameters.Add("@pertsonaTot", MySqlDbType.Int64).Value = DDPertsonaTot.SelectedValue
+        command.Parameters.Add("@latitude", MySqlDbType.Double).Value = txtLatitudea.Text
+        command.Parameters.Add("@longitude", MySqlDbType.Double).Value = txtLongitudea.Text
+        command.Parameters.Add("@mota", MySqlDbType.VarChar).Value = txtMota.Text.ToUpper
+        command.Parameters.Add("@webUrl", MySqlDbType.VarChar).Value = txtWebUrl.Text
+        command.Parameters.Add("@adiskidetsuUrl", MySqlDbType.VarChar).Value = txtAdiskidetsuUrl.Text
+        command.Parameters.Add("@zipUrl", MySqlDbType.VarChar).Value = txtZipUrl.Text
+        command.Parameters.Add("@postaKodea", MySqlDbType.Int64).Value = txtPostaKodea.Text
+        command.Parameters.Add("@herriKodea", MySqlDbType.VarChar).Value = txtHerriKodea.Text
+        command.Parameters.Add("@idSignatura", MySqlDbType.VarChar).Value = lblSignaturaID.Text
+
+        connection.Open()
+
+        If command.ExecuteNonQuery() = 1 Then
+            MsgBox("Aldaketak eginda")
+        Else
+            MsgBox("Zerbait txarto atera da")
+        End If
+
+        connection.Close()
 
     End Sub
 End Class
