@@ -46,7 +46,6 @@ Public Class WebForm6
             MsgBox(ex.ToString)
             cnn1.Close()
         End Try
-
     End Sub
 
     Private Sub ProbintziaKargatu()

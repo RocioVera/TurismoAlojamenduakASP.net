@@ -370,6 +370,42 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:UsuAdminASP.WebForm5._lblProbintziak">
+<summary>
+Control lblProbintziak.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm5._ddlProbintzia">
+<summary>
+Control ddlProbintzia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm5._lblHerriak">
+<summary>
+Control lblHerriak.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm5._ddlHerria">
+<summary>
+Control ddlHerria.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:UsuAdminASP.WebForm5._lblHerriKodea">
 <summary>
 Control lblHerriKodea.
@@ -382,6 +418,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:UsuAdminASP.WebForm5._txtHerriKodea">
 <summary>
 Control txtHerriKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm5._ddlHerriKodea">
+<summary>
+Control ddlHerriKodea.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -532,9 +577,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm5._ImageButton2">
+<member name="F:UsuAdminASP.WebForm5._btnAtzera">
 <summary>
-Control ImageButton2.
+Control btnAtzera.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -25,7 +25,8 @@ Public Class WebForm5
                 DDPertsonaTot.Items.Add(i)
             Next
             gehituDatuak()
-
+            HerriKodeGuztiakKargatu()
+            HerriaGuztiakKargatu()
         End If
     End Sub
 
@@ -57,12 +58,10 @@ Public Class WebForm5
                 'Errore mezua
                 MsgBox("Datu okerrak")
             End If
-
         Catch ex As Exception
             'Konexioa itxi
             cnn1.Close()
         End Try
-
     End Sub
 
     Private Sub gehituDatuak()
@@ -76,7 +75,6 @@ Public Class WebForm5
         txtMarka.Text = ostatua.Marka
         txtTelefonoa.Text = ostatua.OstatuTelefonoa
         DDPertsonaTot.SelectedValue = ostatua.PertsonaTot
-
         txtEmail.Text = ostatua.OstatuEmail
         txtMota.Text = ostatua.Mota
         txtPostaKodea.Text = ostatua.PostaKodea
@@ -89,59 +87,7 @@ Public Class WebForm5
 
     End Sub
 
-    'Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
-
-    '    Try
-    '        'Konexioa egin
-    '        cnn1 = New MySqlConnection(server)
-    '        'Konexioa zabaldu
-    '        'Konexioarekin komandoa egin
-    '        Dim cmd1 = cnn1.CreateCommand()
-    '        'SQL komandoa
-
-    '        cmd1.CommandText = "UPDATE `ostatuak` SET `ostatu_izena`=@izena, `deskribapena`=@deskribapena, ostatu_helbidea=@helbidea,
-    '        `marka`=@marka,`ostatu_email`=@email, `ostatu_telefonoa`=@telefonoa, `pertsona_tot`=@pertsonaTot,latitude=@latitude,
-    '        `longitude`=@longitude, `mota`=@mota,`web_url`=@webUrl,`adiskidetsu_url`=@adiskidetsuUrl, `zip_url`=@zipUrl,
-    '        `posta_kodea`=@postaKodea, `herri_kodea`=@herriKodea WHERE `id_signatura` = @idSignatura"
-
-    '        'Erabiltzaile eremuko textua parametro bezala jarri
-    '        cmd1.Parameters.AddWithValue("@izena", txtIzena.Text.ToUpper)
-    '        cmd1.Parameters.AddWithValue("@deskribapena", txtBDeskribapena.Text.ToUpper)
-    '        cmd1.Parameters.AddWithValue("@helbidea", txtHelbidea.Text.ToUpper)
-    '        cmd1.Parameters.AddWithValue("@marka", txtMarka.Text.ToUpper)
-    '        cmd1.Parameters.AddWithValue("@email", txtEmail.Text)
-    '        cmd1.Parameters.AddWithValue("@telefonoa", txtTelefonoa.Text)
-    '        cmd1.Parameters.AddWithValue("@pertsonaTot", DDPertsonaTot.SelectedValue)
-    '        cmd1.Parameters.AddWithValue("@latitude", txtLatitudea.Text)
-    '        cmd1.Parameters.AddWithValue("@longitude", txtLongitudea.Text)
-    '        cmd1.Parameters.AddWithValue("@mota", txtMota.Text.ToUpper)
-    '        cmd1.Parameters.AddWithValue("@webUrl", txtWebUrl.Text)
-    '        cmd1.Parameters.AddWithValue("@adiskidetsuUrl", txtAdiskidetsuUrl.Text)
-    '        cmd1.Parameters.AddWithValue("@zipUrl", txtZipUrl.Text)
-    '        cmd1.Parameters.AddWithValue("@postaKodea", txtPostaKodea.Text)
-    '        cmd1.Parameters.AddWithValue("@herriKodea", txtHerriKodea.Text)
-    '        cmd1.Parameters.AddWithValue("@idSignatura", lblSignaturaID.Text)
-    '        MsgBox("exito")
-
-    '        cnn1.Open()
-
-    '        MsgBox("hecho")
-
-    '        'Lerro fluxuak irakurri
-    '        Dim das1 As mysq
-    '        'Lerro fluxuen komandoa exekutatu
-    '        das1 = cmd1.ExecuteNonQuery()
-    '        'Lerroak (datuak) badaude
-
-    '    Catch ex As Exception
-    '        'Konexioa itxi
-    '        cnn1.Close()
-    '        MsgBox(ex.Message)
-    '    End Try
-    'End Sub
-
     Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
-
         Dim connection As New MySqlConnection(server)
 
         Dim command As New MySqlCommand("UPDATE `ostatuak` SET `ostatu_izena`=@izena, `deskribapena`=@deskribapena, ostatu_helbidea=@helbidea,
@@ -177,5 +123,147 @@ Public Class WebForm5
 
         connection.Close()
 
+    End Sub
+
+    Protected Sub ImageButton2_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera.Click
+        Response.Redirect("02_BilatuOstatuaAdmin.aspx")
+    End Sub
+
+    Protected Sub ddlProbintzia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlProbintzia.SelectedIndexChanged
+        If ddlProbintzia.SelectedItem.Text <> "Probintzia" Then
+            Dim sql As String
+            sql = "SELECT DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA"
+            HerriDropDownGehitu(sql)
+            sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' "
+            HerriKodeakDropDownGehitu(sql)
+        Else
+            HerriaGuztiakKargatu()
+            HerriKodeGuztiakKargatu()
+        End If
+    End Sub
+
+    Private Sub HerriDropDownGehitu(sql As String)
+        Try
+            ddlHerria.Items.Clear()
+            'defektuzko balorea gehitzen da
+            ddlHerria.Items.Add("Herriak")
+            Dim das1 As New DataSet
+            cnn1 = New MySqlConnection(server)
+            cnn1.Open()
+
+            Dim cmd1 = New MySqlCommand(sql, cnn1)
+            Dim adap1 = New MySqlDataAdapter(cmd1)
+
+            das1.Clear()
+
+            Dim dr As MySqlDataReader
+            dr = cmd1.ExecuteReader
+
+            While dr.Read
+                If (dr.Item(0) <> "HUTSIK") Then
+                    ddlHerria.Items.Add(dr.Item(0))
+                End If
+            End While
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            cnn1.Close()
+        End Try
+    End Sub
+
+    Private Sub HerriKodeakDropDownGehitu(sql As String)
+        Try
+            ddlHerriKodea.Items.Clear()
+            'defektuzko balorea gehitzen da
+            ddlHerriKodea.Items.Add("Herri kodeak")
+            Dim das1 As New DataSet
+            cnn1 = New MySqlConnection(server)
+            cnn1.Open()
+
+            Dim cmd1 = New MySqlCommand(sql, cnn1)
+            Dim adap1 = New MySqlDataAdapter(cmd1)
+
+            das1.Clear()
+
+            Dim dr As MySqlDataReader
+            dr = cmd1.ExecuteReader
+            MsgBox(sql)
+
+            While dr.Read
+                ddlHerriKodea.Items.Add(dr.Item(0))
+            End While
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            cnn1.Close()
+        End Try
+    End Sub
+
+    Protected Sub ddlHerria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlHerria.SelectedIndexChanged
+        'If ddlHerria.SelectedItem.Text = "Herriak" And ddlProbintzia.SelectedItem.Text = "Probintzia" Then
+        '    HerriKodeGuztiakKargatu()
+
+        'Else
+        '    Dim sql As String
+        '    If ddlHerria.SelectedItem.Text = "Herriak" Then
+        '        If ddlProbintzia.SelectedItem.Text = "Probintzia" Then
+        '            HerriKodeGuztiakKargatu()
+        '        Else
+        '            sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' "
+        '        End If
+        '    ElseIf ddlProbintzia.SelectedItem.Text = "Probintzia" Then
+        '        If ddlHerria.SelectedItem.Text = "Herriak" Then
+        '            HerriKodeGuztiakKargatu()
+        '        Else
+        '            sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak WHERE herri_kodea LIKE '" & ddlHerriKodea.SelectedItem.Text & "' "
+        '        End If
+        '    Else
+        '        sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak WHERE herri_kodea LIKE '" & ddlHerriKodea.SelectedItem.Text & "' " & "AND upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' "
+
+        '    End If
+        '    sql += "ORDER BY herri_kodea"
+        '    HerriKodeakDropDownGehitu(sql)
+        'End If
+        Dim sql As String
+
+        If ddlHerria.SelectedItem.Text = "Herriak" And ddlProbintzia.SelectedItem.Text = "Probintzia" Then
+            HerriKodeGuztiakKargatu()
+        Else
+            If ddlHerriKodea.SelectedItem.Text <> "Herri kodeak" Then
+                Sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak WHERE herri_kodea LIKE '" & ddlHerriKodea.SelectedItem.Text & "' "
+
+                If ddlProbintzia.SelectedItem.Text <> "Probintzia" Then
+                    sql += "AND upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' "
+                End If
+
+                sql += "ORDER BY herri_kodea"
+                HerriKodeakDropDownGehitu(sql)
+                'Else
+                ' HerriKodeGuztiakKargatu()
+
+                'End If
+            End If
+
+        End If
+        MsgBox(Sql)
+
+    End Sub
+
+    Private Sub HerriaGuztiakKargatu()
+        Dim sql As String
+        sql = "SELECT DISTINCT(herri_izena) FROM posta_kodeak"
+        HerriDropDownGehitu(sql)
+    End Sub
+
+    Protected Sub ddlHerriKodea_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlHerriKodea.SelectedIndexChanged
+        If ddlHerriKodea.SelectedItem.Text = "Herri kodeak" Then
+            HerriKodeGuztiakKargatu()
+        End If
+    End Sub
+
+    Private Sub HerriKodeGuztiakKargatu()
+        Dim sql As String
+        sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak"
+        HerriKodeakDropDownGehitu(sql)
     End Sub
 End Class

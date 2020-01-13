@@ -10,11 +10,11 @@
 
         .auto-style8 {
             position: absolute;
-            top: 3%;
-            left: 2%;
-            height: 751px;
-            width: 874px;
-            right: 206px;
+            top: 6%;
+            left: 3%;
+            height: 873px;
+            width: 832px;
+            right: 399px;
         }
 
         
@@ -96,9 +96,32 @@
                     </tr>
                 <tr>
                     <td class="auto-style11" colspan="2">
+                        <asp:Label ID="lblProbintziak" runat="server" Text="Probintziak:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        <br />
+&nbsp;<asp:DropDownList ID="ddlProbintzia" runat="server" AutoPostBack="True" Width="147px" Height="30px">
+            <asp:ListItem>Probintzia</asp:ListItem>
+            <asp:ListItem>Araba</asp:ListItem>
+            <asp:ListItem>Bizkaia</asp:ListItem>
+            <asp:ListItem>Gipuzkoa</asp:ListItem>
+        </asp:DropDownList>
+            &nbsp;
+                        </td>
+                    <td class="auto-style11" colspan="2">
+                        <asp:Label ID="lblHerriak" runat="server" Text="Herriak:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        <br />
+&nbsp;<asp:DropDownList ID="ddlHerria" runat="server" AutoPostBack="True" Width="151px" Height="30px">
+            <asp:ListItem>Herriak</asp:ListItem>
+        </asp:DropDownList>
+                        </td>
+                    </tr>
+                <tr>
+                    <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblHerriKodea" runat="server" Text="Herri kodea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
                         &nbsp;<asp:TextBox ID="txtHerriKodea" runat="server" Height="20px" Width="250px"></asp:TextBox>
+        <asp:DropDownList ID="ddlHerriKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px">
+            <asp:ListItem>Herri kodeak</asp:ListItem>
+        </asp:DropDownList>
                         </td>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblPostaKodea" runat="server" Text="Posta kodea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
@@ -172,7 +195,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style11" colspan="2" aria-orientation="horizontal" style="text-align: right">
-                        <asp:ImageButton ID="ImageButton2" runat="server" Height="34px" ImageUrl="~/Argazkiak/atzeraBeltza.png" Width="43px" />
+                        <asp:ImageButton ID="btnAtzera" runat="server" Height="34px" ImageUrl="~/Argazkiak/atzeraBeltza.png" Width="43px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                     <td class="auto-style11" colspan="2" aria-orientation="horizontal" style="text-align: left">

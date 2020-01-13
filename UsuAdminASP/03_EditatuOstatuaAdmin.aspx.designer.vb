@@ -149,6 +149,42 @@ Partial Public Class WebForm5
     Protected WithEvents txtMarka As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control lblProbintziak.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblProbintziak As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control ddlProbintzia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlProbintzia As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control lblHerriak.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblHerriak As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control ddlHerria.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlHerria As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''Control lblHerriKodea.
     '''</summary>
     '''<remarks>
@@ -165,6 +201,15 @@ Partial Public Class WebForm5
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtHerriKodea As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control ddlHerriKodea.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlHerriKodea As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control lblPostaKodea.
@@ -311,13 +356,13 @@ Partial Public Class WebForm5
     Protected WithEvents txtZipUrl As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control ImageButton2.
+    '''Control btnAtzera.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ImageButton2 As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents btnAtzera As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
     '''Control ImageButton1.
