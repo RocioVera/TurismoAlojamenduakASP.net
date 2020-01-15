@@ -23,22 +23,22 @@ Partial Public Class WebForm6
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control ImageButton1.
+    '''Control imgBtnAtzera.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ImageButton1 As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents imgBtnAtzera As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''Control btnSuma.
+    '''Control imgBtnHasiSaioa.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnSuma As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents imgBtnHasiSaioa As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
     '''Control lblBilatu.
@@ -50,15 +50,6 @@ Partial Public Class WebForm6
     Protected WithEvents lblBilatu As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control ddlMota.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ddlMota As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
     '''Control txtIzena.
     '''</summary>
     '''<remarks>
@@ -66,6 +57,24 @@ Partial Public Class WebForm6
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtIzena As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control imagebuttonbilatu.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents imagebuttonbilatu As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''Control ddlMota.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlMota As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control ddlProbintzia.
@@ -84,15 +93,6 @@ Partial Public Class WebForm6
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ddlHerria As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Control imagebuttonbilatu.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents imagebuttonbilatu As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
     '''Control GridViewDatuak.

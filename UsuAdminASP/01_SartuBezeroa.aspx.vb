@@ -111,4 +111,9 @@ Public Class WebForm1
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
     End Sub
+
+    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera.Click
+        Response.Redirect("02_BilatuOstatuaAdmin.aspx")
+
+    End Sub
 End Class

@@ -11,15 +11,107 @@ Public Class WebForm6
     Dim komando As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim data As New DataSet
-
+    Dim sartutakoBezeroa As New Bezeroa
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
+
+            sartutakoBezeroa = Session("sartutakoBezeroa")
+            Try
+                If sartutakoBezeroa.nan IsNot Nothing Then
+                End If
+            Catch ex As Exception
+                sartutakoBezeroa = ateraGonbidatua()
+            End Try
+
+
             ProbintziaKargatu()
             HerriaGuztiakKargatu()
+            MotaGuztiakKargatu()
             taulaGehitu()
         End If
     End Sub
+
+    Protected Function ateraGonbidatua()
+        Dim bezeroa As String
+        Try
+            'Konexioa egin
+            cnn1 = New MySqlConnection(server)
+            'Konexioa zabaldu
+            cnn1.Open()
+            'Konexioarekin komandoa egin
+            Dim cmd1 = cnn1.CreateCommand()
+            'SQL komandoa
+            cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=@pass"
+            Dim userencriptado = AES_Encrypt("00000000", "encriptado")
+            Dim psswencriptado = AES_Encrypt("GONBIDATUA", "encriptado")
+
+            'Erabiltzaile eremuko textua parametro bezala jarri
+            cmd1.Parameters.AddWithValue("@user", userencriptado)
+            'Pasahitza eremuko textua parametro bezala jarri
+            cmd1.Parameters.AddWithValue("@pass", psswencriptado)
+            'Lerro fluxuak irakurri
+            Dim das1 As MySqlDataReader
+            'Lerro fluxuen komandoa exekutatu
+            das1 = cmd1.ExecuteReader()
+            'Lerroak (datuak) badaude
+            If das1.HasRows() Then
+                Dim bez
+                While das1.Read()
+                    bez = New Bezeroa(AES_Decrypt(das1.GetString(0), "encriptado"), AES_Decrypt(das1.GetString(1), "encriptado"), AES_Decrypt(das1.GetString(2), "encriptado"), das1.GetInt32(3), AES_Decrypt(das1.GetString(4), "encriptado"), AES_Decrypt(das1.GetString(5), "encriptado"))
+                    ' MsgBox(bez.nan)
+
+                End While
+
+                Return bez
+            Else
+                'Errore mezua
+                MsgBox("Datu okerrak")
+            End If
+
+        Catch ex As Exception
+            'Konexioa itxi
+            cnn1.Close()
+        End Try
+    End Function
+
+    Public Function AES_Encrypt(ByVal input As String, ByVal pass As String) As String
+        Dim AES As New System.Security.Cryptography.RijndaelManaged
+        Dim Hash_AES As New System.Security.Cryptography.MD5CryptoServiceProvider
+        Dim encrypted As String = ""
+        Try
+            Dim hash(31) As Byte
+            Dim temp As Byte() = Hash_AES.ComputeHash(System.Text.ASCIIEncoding.ASCII.GetBytes(pass))
+            Array.Copy(temp, 0, hash, 0, 16)
+            Array.Copy(temp, 0, hash, 15, 16)
+            AES.Key = hash
+            AES.Mode = Security.Cryptography.CipherMode.ECB
+            Dim DESEncrypter As System.Security.Cryptography.ICryptoTransform = AES.CreateEncryptor
+            Dim Buffer As Byte() = System.Text.ASCIIEncoding.ASCII.GetBytes(input)
+            encrypted = Convert.ToBase64String(DESEncrypter.TransformFinalBlock(Buffer, 0, Buffer.Length))
+            Return encrypted
+        Catch ex As Exception
+        End Try
+    End Function
+
+    Public Function AES_Decrypt(ByVal input As String, ByVal pass As String) As String
+        Dim AES As New System.Security.Cryptography.RijndaelManaged
+        Dim Hash_AES As New System.Security.Cryptography.MD5CryptoServiceProvider
+        Dim decrypted As String = ""
+        Try
+            Dim hash(31) As Byte
+            Dim temp As Byte() = Hash_AES.ComputeHash(System.Text.ASCIIEncoding.ASCII.GetBytes(pass))
+            Array.Copy(temp, 0, hash, 0, 16)
+            Array.Copy(temp, 0, hash, 15, 16)
+            AES.Key = hash
+            AES.Mode = Security.Cryptography.CipherMode.ECB
+            Dim DESDecrypter As System.Security.Cryptography.ICryptoTransform = AES.CreateDecryptor
+            Dim Buffer As Byte() = Convert.FromBase64String(input)
+            decrypted = System.Text.ASCIIEncoding.ASCII.GetString(DESDecrypter.TransformFinalBlock(Buffer, 0, Buffer.Length))
+            Return decrypted
+        Catch ex As Exception
+        End Try
+    End Function
 
     Private Sub HerriDropDownGehitu(sql As String)
         Try
@@ -39,13 +131,44 @@ Public Class WebForm6
             dr = cmd1.ExecuteReader
 
             While dr.Read
-                ddlHerria.Items.Add(dr.Item(0))
+                If (dr.Item(0) <> "HUTSIK") Then
+                    ddlHerria.Items.Add(dr.Item(0))
+                End If
             End While
             dr.Close()
         Catch ex As Exception
             MsgBox(ex.ToString)
             cnn1.Close()
         End Try
+
+    End Sub
+
+    Private Sub MotaDropDownGehitu(sql As String)
+        Try
+            ddlMota.Items.Clear()
+            'defektuzko balorea gehitzen da
+            ddlMota.Items.Add("Mota")
+            Dim das1 As New DataSet
+            cnn1 = New MySqlConnection(server)
+            cnn1.Open()
+
+            Dim cmd1 = New MySqlCommand(sql, cnn1)
+            Dim adap1 = New MySqlDataAdapter(cmd1)
+
+            das1.Clear()
+
+            Dim dr As MySqlDataReader
+            dr = cmd1.ExecuteReader
+
+            While dr.Read
+                ddlMota.Items.Add(dr.Item(0))
+            End While
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            cnn1.Close()
+        End Try
+
     End Sub
 
     Private Sub ProbintziaKargatu()
@@ -56,7 +179,7 @@ Public Class WebForm6
 
             Dim das1 As New DataSet
             Dim sql As String
-            sql = "SELECT DISTINCT(probintzia) FROM posta_kodeak ORDER BY probintzia"
+            sql = "SELECT DISTINCT(probintzia) FROM posta_kodeak"
 
             cnn1 = New MySqlConnection(server)
             cnn1.Open()
@@ -70,7 +193,10 @@ Public Class WebForm6
             dr = cmd1.ExecuteReader
 
             While dr.Read
-                ddlProbintzia.Items.Add(dr.Item(0))
+                If (dr.Item(0) <> "HUTSIK") Then
+                    ddlProbintzia.Items.Add(dr.Item(0))
+                End If
+
             End While
             dr.Close()
         Catch ex As Exception
@@ -82,15 +208,31 @@ Public Class WebForm6
 
     Private Sub HerriaGuztiakKargatu()
         Dim sql As String
-        sql = "SELECT DISTINCT(herri_izena) FROM posta_kodeak ORDER BY herri_izena"
+        sql = "SELECT DISTINCT(herri_izena) FROM posta_kodeak"
         HerriDropDownGehitu(sql)
+    End Sub
 
+    Protected Sub MotaGuztiakKargatu()
+        Dim sql As String
+        sql = "SELECT DISTINCT(mota) FROM ostatuak"
+        MotaDropDownGehitu(sql)
     End Sub
 
     Protected Sub ddlProbintzia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlProbintzia.SelectedIndexChanged
+        If ddlProbintzia.SelectedItem.Text <> "Probintzia" Then
+            Dim sql As String
+            sql = "SELECT DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA"
+            HerriDropDownGehitu(sql)
+        Else
+            HerriaGuztiakKargatu()
+        End If
+    End Sub
+
+
+    Protected Sub ddlMota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlMota.SelectedIndexChanged
         Dim sql As String
-        sql = "SELECT DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA"
-        HerriDropDownGehitu(sql)
+        sql = "SELECT DISTINCT(mota) FROM ostatuak WHERE upper(mota) Like upper('" & ddlMota.SelectedItem.Text.ToUpper & "') ORDER BY mota"
+        MotaDropDownGehitu(sql)
     End Sub
 
     Protected Sub imagebuttonbilatu_Click(sender As Object, e As ImageClickEventArgs) Handles imagebuttonbilatu.Click
@@ -140,19 +282,42 @@ Public Class WebForm6
 
         End Try
     End Sub
-    Protected Sub btnSuma_Click(sender As Object, e As EventArgs) Handles btnSuma.Click
-        Response.Redirect("02_BilatuOstatua.aspx")
+
+
+    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera.Click
+        Response.Redirect("01_SartuBezeroa.aspx")
     End Sub
 
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
+        'MsgBox("Value:" & GridViewDatuak.SelectedIndex)
+        Dim sartutakoBezeroaFroga = sartutakoBezeroa
+        MsgBox(sartutakoBezeroaFroga.nan)
+        '        MsgBox(GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
+        If sartutakoBezeroa.nan Is Nothing Then
+
+            Dim erantzuna = MsgBox("Erreserbatzeko logeatuta egon behar zara, hasi nahi duzu saioa?", vbYesNo, "Logeatu!!!")
+            If erantzuna = vbYes Then    ' User chose Yes.
+                Response.Redirect("01_SartuBezeroa.aspx")
+            End If
+        Else
+            Session.Add("sartutakoBezeroa", sartutakoBezeroa)
+            Session.Add("hautatutakoOstatua", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
+
+
+        End If
 
     End Sub
 
-    Protected Sub ddlHerria_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Protected Sub ddlHerria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlHerria.SelectedIndexChanged
+        If (ddlProbintzia.SelectedItem.Text = "Probintziak") Then
+            HerriaGuztiakKargatu()
+        End If
+        taulaGehitu()
 
     End Sub
 
-    Protected Sub ddlMota_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Protected Sub ImageButton2_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa.Click
+        Response.Redirect("/01_SartuBezeroa.aspx")
 
     End Sub
 End Class

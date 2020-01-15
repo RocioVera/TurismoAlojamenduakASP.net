@@ -32,13 +32,13 @@ Partial Public Class WebForm2
     Protected WithEvents ImageButton1 As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''Control btnSuma.
+    '''Control ImageButton2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnSuma As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ImageButton2 As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
     '''Control lblBilatu.

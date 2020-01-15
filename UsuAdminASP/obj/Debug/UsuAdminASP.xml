@@ -91,45 +91,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm1._Label1">
+<member name="F:UsuAdminASP.WebForm1._btnAtzera">
 <summary>
-Control Label1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm1._Label2">
-<summary>
-Control Label2.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm1._Label3">
-<summary>
-Control Label3.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm1._Label4">
-<summary>
-Control Label4.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm1._Label5">
-<summary>
-Control Label5.
+Control btnAtzera.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -163,9 +127,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm2._btnSuma">
+<member name="F:UsuAdminASP.WebForm2._ImageButton2">
 <summary>
-Control btnSuma.
+Control ImageButton2.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -604,18 +568,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._ImageButton1">
+<member name="F:UsuAdminASP.WebForm6._imgBtnAtzera">
 <summary>
-Control ImageButton1.
+Control imgBtnAtzera.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._btnSuma">
+<member name="F:UsuAdminASP.WebForm6._imgBtnHasiSaioa">
 <summary>
-Control btnSuma.
+Control imgBtnHasiSaioa.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -631,18 +595,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._ddlMota">
+<member name="F:UsuAdminASP.WebForm6._txtIzena">
 <summary>
-Control ddlMota.
+Control txtIzena.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._txtIzena">
+<member name="F:UsuAdminASP.WebForm6._imagebuttonbilatu">
 <summary>
-Control txtIzena.
+Control imagebuttonbilatu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm6._ddlMota">
+<summary>
+Control ddlMota.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -661,15 +634,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:UsuAdminASP.WebForm6._ddlHerria">
 <summary>
 Control ddlHerria.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm6._imagebuttonbilatu">
-<summary>
-Control imagebuttonbilatu.
 </summary>
 <remarks>
 Campo generado automáticamente.

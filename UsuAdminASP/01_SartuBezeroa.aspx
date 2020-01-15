@@ -46,14 +46,7 @@
             width: 185px;
             height: 42px;
         }
-        .auto-style10 {
-            position: absolute;
-            top: 5%;
-            left: 2%;
-            height: 66px;
-            width: 204px;
-        }
-    </style>
+        </style>
 </head>
 <body style ="background-image:url(Argazkiak/01_SartuBezeroa.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
     <form id="form1" runat="server">
@@ -83,16 +76,8 @@
                 <asp:Button ID="btnSartu" runat="server" Text="Sartu" Width="190px" BackColor="#F8ECD4" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="#79553D" Height="30px" />
             </div>
         </div>
-    <div id="gonbidatuLaukia" style="align-content: center center; margin: auto; background-color: #C29E87; " class="auto-style10"  >
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Underline="True" ForeColor="#422100" Text="Gonbidatu bezeroa"></asp:Label>
-            <br />
-&nbsp;<asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="#8A4500" Text="Erabiltzailea: "></asp:Label>
-            <asp:Label ID="Label3" runat="server" ForeColor="White" Text="000000000"></asp:Label>
-            <br />
-&nbsp;<asp:Label ID="Label4" runat="server" Font-Bold="True" ForeColor="#8A4500" Text="Pasahitza: "></asp:Label>
-            <asp:Label ID="Label5" runat="server" ForeColor="White" Text="GONBIDATUA"></asp:Label>
-        </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:ImageButton ID="btnAtzera" runat="server" Height="33px" ImageUrl="~/Argazkiak/atzera.png" Width="49px" />
     </form>
 </body>
 </html>

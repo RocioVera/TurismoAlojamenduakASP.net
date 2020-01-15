@@ -163,7 +163,7 @@
     </Compile>
     <Compile Include="02_BilatuOstatuaAdmin.aspx.vb">
       <DependentUpon>02_BilatuOstatuaAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="03_EditatuOstatuaAdmin.aspx.designer.vb">
       <DependentUpon>03_EditatuOstatuaAdmin.aspx</DependentUpon>
