@@ -95,6 +95,42 @@ Partial Public Class WebForm6
     Protected WithEvents ddlHerria As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control lblHasieraData.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblHasieraData As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control HasieraCalendar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HasieraCalendar As Global.System.Web.UI.WebControls.Calendar
+
+    '''<summary>
+    '''Control lblAmaieraData.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblAmaieraData As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control AmaieraCalendar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents AmaieraCalendar As Global.System.Web.UI.WebControls.Calendar
+
+    '''<summary>
     '''Control GridViewDatuak.
     '''</summary>
     '''<remarks>

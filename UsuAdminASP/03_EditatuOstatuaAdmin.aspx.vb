@@ -18,8 +18,8 @@ Public Class WebForm5
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
             sartutakoBezeroa = Session("sartutakoBezeroa")
-            'Dim idSignatura As String = Session("hautatutakoOstatua")
-            Dim idSignatura As String = "28I00005"
+            Dim idSignatura As String = Session("hautatutakoOstatua")
+            '  Dim idSignatura As String = "28I00005"
             ateraDatuak(idSignatura)
             For i As Integer = 1 To 1500
                 DDPertsonaTot.Items.Add(i)
@@ -32,6 +32,8 @@ Public Class WebForm5
             HerriaGuztiakKargatu()
         End If
     End Sub
+
+
 
     Private Sub ateraDatuak(idSignatura As String)
         Try
@@ -173,6 +175,7 @@ Public Class WebForm5
             MsgBox(ex.ToString)
             cnn1.Close()
         End Try
+
     End Sub
 
     Private Sub HerriKodeakDropDownGehitu(sql As String)
@@ -251,4 +254,7 @@ Public Class WebForm5
         HerriKodeakDropDownGehitu(sql)
     End Sub
 
+    Protected Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+
+    End Sub
 End Class

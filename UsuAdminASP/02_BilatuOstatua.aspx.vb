@@ -11,20 +11,10 @@ Public Class WebForm6
     Dim komando As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim data As New DataSet
-    Dim sartutakoBezeroa As New Bezeroa
+    Private sartutakoBezeroa As New Bezeroa
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
-
-            sartutakoBezeroa = Session("sartutakoBezeroa")
-            Try
-                If sartutakoBezeroa.nan IsNot Nothing Then
-                End If
-            Catch ex As Exception
-                sartutakoBezeroa = ateraGonbidatua()
-            End Try
-
-
             ProbintziaKargatu()
             HerriaGuztiakKargatu()
             MotaGuztiakKargatu()
@@ -32,8 +22,7 @@ Public Class WebForm6
         End If
     End Sub
 
-    Protected Function ateraGonbidatua()
-        Dim bezeroa As String
+    Protected Sub ateraGonbidatua()
         Try
             'Konexioa egin
             cnn1 = New MySqlConnection(server)
@@ -56,14 +45,11 @@ Public Class WebForm6
             das1 = cmd1.ExecuteReader()
             'Lerroak (datuak) badaude
             If das1.HasRows() Then
-                Dim bez
                 While das1.Read()
-                    bez = New Bezeroa(AES_Decrypt(das1.GetString(0), "encriptado"), AES_Decrypt(das1.GetString(1), "encriptado"), AES_Decrypt(das1.GetString(2), "encriptado"), das1.GetInt32(3), AES_Decrypt(das1.GetString(4), "encriptado"), AES_Decrypt(das1.GetString(5), "encriptado"))
+                    sartutakoBezeroa = New Bezeroa(AES_Decrypt(das1.GetString(0), "encriptado"), AES_Decrypt(das1.GetString(1), "encriptado"), AES_Decrypt(das1.GetString(2), "encriptado"), das1.GetInt32(3), AES_Decrypt(das1.GetString(4), "encriptado"), AES_Decrypt(das1.GetString(5), "encriptado"))
                     ' MsgBox(bez.nan)
 
                 End While
-
-                Return bez
             Else
                 'Errore mezua
                 MsgBox("Datu okerrak")
@@ -73,7 +59,7 @@ Public Class WebForm6
             'Konexioa itxi
             cnn1.Close()
         End Try
-    End Function
+    End Sub
 
     Public Function AES_Encrypt(ByVal input As String, ByVal pass As String) As String
         Dim AES As New System.Security.Cryptography.RijndaelManaged
@@ -289,21 +275,26 @@ Public Class WebForm6
     End Sub
 
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
-        'MsgBox("Value:" & GridViewDatuak.SelectedIndex)
-        Dim sartutakoBezeroaFroga = sartutakoBezeroa
-        MsgBox(sartutakoBezeroaFroga.nan)
-        '        MsgBox(GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
-        If sartutakoBezeroa.nan Is Nothing Then
+        Try
+            sartutakoBezeroa = Session("sartutakoBezeroa")
+            If sartutakoBezeroa.nan IsNot Nothing Then
+                MsgBox(sartutakoBezeroa.nan)
+            End If
+        Catch ex As Exception
+            ateraGonbidatua()
+        End Try
 
+        If sartutakoBezeroa.nan.Equals("00000000") Then
             Dim erantzuna = MsgBox("Erreserbatzeko logeatuta egon behar zara, hasi nahi duzu saioa?", vbYesNo, "Logeatu!!!")
             If erantzuna = vbYes Then    ' User chose Yes.
                 Response.Redirect("01_SartuBezeroa.aspx")
             End If
         Else
             Session.Add("sartutakoBezeroa", sartutakoBezeroa)
-            Session.Add("hautatutakoOstatua", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
+            Session.Add("ostatuaSignatura", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
+            Session.Add("ostatuIzena", GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
 
-
+            Response.Redirect("03_ErreserbatuOstatua.aspx")
         End If
 
     End Sub
@@ -318,6 +309,19 @@ Public Class WebForm6
 
     Protected Sub ImageButton2_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa.Click
         Response.Redirect("/01_SartuBezeroa.aspx")
+    End Sub
 
+    Protected Sub Calendar1_DayRender(sender As Object, e As DayRenderEventArgs) Handles HasieraCalendar.DayRender
+        quitarFechas(e)
+    End Sub
+
+    Protected Sub AmaieraCalendar_SelectionChanged(sender As Object, e As DayRenderEventArgs) Handles AmaieraCalendar.DayRender
+        quitarFechas(e)
+    End Sub
+
+    Sub quitarFechas(e As DayRenderEventArgs)
+        If e.Day.Date < Now.Date Then
+            e.Day.IsSelectable = False
+        End If
     End Sub
 End Class

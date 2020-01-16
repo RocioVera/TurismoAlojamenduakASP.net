@@ -10,15 +10,11 @@ Public Class WebForm1
     '  Dim direccion As String = "server=kasserver.synology.me;database=reto_gp1;user id=gp1;port=3307; password=ZBlrkPWaSdVs5F3l;"
     'SQL konexioa
     Dim cnn1 As MySqlConnection
-    Dim dr As MySqlDataReader
-    Dim komando As New MySqlCommand
-    Dim adapter As New MySqlDataAdapter
-    Dim data As New DataSet
+
 
     'objetua sortu
 
     Protected Sub btnSartu_Click(sender As Object, e As EventArgs) Handles btnSartu.Click
-        Dim bezeroa As String
         Try
             'Konexioa egin
             cnn1 = New MySqlConnection(server)
@@ -30,7 +26,6 @@ Public Class WebForm1
             cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=@pass"
             Dim userencriptado = AES_Encrypt(txtBezeroa.Text, "encriptado")
             Dim psswencriptado = AES_Encrypt(txtPasahitza.Text, "encriptado")
-
             'Erabiltzaile eremuko textua parametro bezala jarri
             cmd1.Parameters.AddWithValue("@user", userencriptado)
             'Pasahitza eremuko textua parametro bezala jarri
@@ -39,27 +34,25 @@ Public Class WebForm1
             Dim das1 As MySqlDataReader
             'Lerro fluxuen komandoa exekutatu
             das1 = cmd1.ExecuteReader()
+
             'Lerroak (datuak) badaude
             If das1.HasRows() Then
                 While das1.Read()
-                    'NO SE SI ES MEJOR PASARLOS DESENCRIPTADO O QUE LUEGO SE DESENCRIPTE
-                    Dim bez As New Bezeroa(AES_Decrypt(das1.GetString(0), "encriptado"), AES_Decrypt(das1.GetString(1), "encriptado"), AES_Decrypt(das1.GetString(2), "encriptado"), AES_Decrypt(das1.GetInt32(3), "encriptado"), das1.GetString(4), AES_Decrypt(das1.GetString(5), "encriptado"))
+                    Dim bez As New Bezeroa(AES_Decrypt(das1.GetString(0), "encriptado"), AES_Decrypt(das1.GetString(1), "encriptado"), AES_Decrypt(das1.GetString(2), "encriptado"), das1.GetInt32(3), AES_Decrypt(das1.GetString(4), "encriptado"), AES_Decrypt(das1.GetString(5), "encriptado"))
                     Session.Add("sartutakoBezeroa", bez)
-
                     If (bez.baimena = 0) Then 'superAdmin
                         MsgBox("Baimena superAdmin:" & bez.baimena)
                         Response.Redirect("02_BilatuOstatuaAdmin.aspx")
-                    ElseIf (bez.baimena = 1) Then 'ostatu administratzaileak
-                        MsgBox("Baimena Administratzaileak:" & bez.baimena)
-                    ElseIf (bez.baimena = 2) Then 'gonbidatuak
+                    ElseIf (bez.baimena = 1) Then 'gonbidatuak
                         MsgBox("Baimena gonbidatuak:" & bez.baimena)
                         Response.Redirect("02_BilatuOstatua.aspx")
-                    ElseIf (bez.baimena = 3) Then ' bezeronormala
+                    ElseIf (bez.baimena = 2) Then ' bezeronormala
                         MsgBox("Baimena bezero normala:" & bez.baimena)
                         Response.Redirect("02_BilatuOstatua.aspx")
                     End If
                 End While
             Else
+                lblErroreMezua.Visible = True
                 'Errore mezua
                 MsgBox("Datu okerrak")
             End If
@@ -67,6 +60,8 @@ Public Class WebForm1
         Catch ex As Exception
             'Konexioa itxi
             cnn1.Close()
+            MsgBox(ex.Message)
+
         End Try
     End Sub
 
@@ -108,12 +103,9 @@ Public Class WebForm1
         End Try
     End Function
 
-    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-    End Sub
-
     Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera.Click
-        Response.Redirect("02_BilatuOstatuaAdmin.aspx")
-
+        Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
+
+
 End Class

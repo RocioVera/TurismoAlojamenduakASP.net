@@ -121,6 +121,7 @@
     <Content Include="02_BilatuOstatuaAdmin.aspx" />
     <Content Include="03_EditatuOstatuaAdmin.aspx" />
     <Content Include="02_BilatuOstatua.aspx" />
+    <Content Include="03_ErreserbatuOstatua.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ostatua.vb" />
@@ -177,6 +178,13 @@
     </Compile>
     <Compile Include="02_BilatuOstatua.aspx.vb">
       <DependentUpon>02_BilatuOstatua.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="03_ErreserbatuOstatua.aspx.designer.vb">
+      <DependentUpon>03_ErreserbatuOstatua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_ErreserbatuOstatua.aspx.vb">
+      <DependentUpon>03_ErreserbatuOstatua.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

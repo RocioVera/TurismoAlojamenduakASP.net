@@ -39,14 +39,13 @@
             position: absolute;
             top: 17%;
             left: 34%;
-            height: 165px;
-            width: 392px;
+            height: 186px;
+            width: 393px;
         }
         .auto-style9 {
-            width: 185px;
-            height: 42px;
+            height: 59px;
         }
-        </style>
+                </style>
 </head>
 <body style ="background-image:url(Argazkiak/01_SartuBezeroa.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
     <form id="form1" runat="server">
@@ -72,8 +71,12 @@
                     </td>
                 </tr>
             </table>
-            <div class="auto-style9" style="margin-left: 80px"> <br />
+            <div class="auto-style9" style="text-align: center; font-size: 14px; color: #FF0000; background-color: #F8ECD4;">
+                <strong>
+                <asp:Label ID="lblErroreMezua" runat="server" Text="Erabiltzailea edo pasahitza txarto, sartu berriro." Visible="False"></asp:Label>
+                <br />
                 <asp:Button ID="btnSartu" runat="server" Text="Sartu" Width="190px" BackColor="#F8ECD4" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="#79553D" Height="30px" />
+                </strong>
             </div>
         </div>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

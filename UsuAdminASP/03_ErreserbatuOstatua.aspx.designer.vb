@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm1
+Partial Public Class WebForm4
 
     '''<summary>
     '''Control form1.
@@ -23,65 +23,56 @@ Partial Public Class WebForm1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control lblErabiltzaile.
+    '''Control lblHotela.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblErabiltzaile As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblHotela As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtBezeroa.
+    '''Control lblHotelaIzena.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtBezeroa As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblHotelaIzena As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control lblPasahitza.
+    '''Control lblHasieraData.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblPasahitza As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblHasieraData As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtPasahitza.
+    '''Control HasieraCalendar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPasahitza As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents HasieraCalendar As Global.System.Web.UI.WebControls.Calendar
 
     '''<summary>
-    '''Control lblErroreMezua.
+    '''Control lblAmaieraData.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblErroreMezua As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblAmaieraData As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control btnSartu.
+    '''Control AmaieraCalendar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnSartu As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control btnAtzera.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnAtzera As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents AmaieraCalendar As Global.System.Web.UI.WebControls.Calendar
 End Class
