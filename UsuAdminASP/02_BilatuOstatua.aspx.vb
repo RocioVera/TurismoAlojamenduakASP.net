@@ -11,10 +11,16 @@ Public Class WebForm6
     Dim komando As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim data As New DataSet
-    Private sartutakoBezeroa As New Bezeroa
+    Dim sartutakoBezeroa As New Bezeroa
+
+    Dim gonbidatuNan As String = "00000000"
+    Dim gonbidatuIzena As String = "GONBIDATUA"
+    Dim gonbidapenBezeroa As New Bezeroa(gonbidatuNan, gonbidatuIzena)
+
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
+            imgBtnImage()
             ProbintziaKargatu()
             HerriaGuztiakKargatu()
             MotaGuztiakKargatu()
@@ -32,7 +38,7 @@ Public Class WebForm6
             Dim cmd1 = cnn1.CreateCommand()
             'SQL komandoa
             cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=@pass"
-            Dim userencriptado = AES_Encrypt("00000000", "encriptado")
+            Dim userencriptado = AES_Encrypt(gonbidatuNan, "encriptado")
             Dim psswencriptado = AES_Encrypt("GONBIDATUA", "encriptado")
 
             'Erabiltzaile eremuko textua parametro bezala jarri
@@ -289,7 +295,7 @@ Public Class WebForm6
             ateraGonbidatua()
         End Try
 
-        If sartutakoBezeroa.nan.Equals("00000000") Then
+        If sartutakoBezeroa.nan.Equals(gonbidatuNan) Then
             Dim erantzuna = MsgBox("Erreserbatzeko logeatuta egon behar zara, hasi nahi duzu saioa?", vbYesNo, "Logeatu!!!")
             If erantzuna = vbYes Then    ' User chose Yes.
                 Response.Redirect("01_SartuBezeroa.aspx")
@@ -333,7 +339,32 @@ Public Class WebForm6
 
     Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera0.Click
         Response.Redirect("03_Mapa.aspx")
+    End Sub
+
+    Protected Sub imgBtnHasiSaioa_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa.Click
+        If sartutakoBezeroa IsNot Nothing Then
+            If sartutakoBezeroa.nan <> gonbidapenBezeroa.nan Then
+                sartutakoBezeroa.nan = gonbidapenBezeroa.nan
+                sartutakoBezeroa.erabil_izena = gonbidapenBezeroa.erabil_izena
+            End If
+            Response.Redirect("01_SartuBezeroa.aspx")
+            'poner el bezero a 0000
+        End If
+        imgBtnImage()
+
 
     End Sub
 
+    Sub imgBtnImage()
+        Try
+            sartutakoBezeroa = Session("sartutakoBezeroa")
+            If sartutakoBezeroa.nan.Equals(gonbidapenBezeroa.nan) Then
+                imgBtnHasiSaioa.ImageUrl = "~/Argazkiak/hasiSaioa.png"
+            Else
+                imgBtnHasiSaioa.ImageUrl = "~/Argazkiak/cerrarSesion.png"
+            End If
+        Catch ex As Exception
+            MsgBox("Mal")
+        End Try
+    End Sub
 End Class

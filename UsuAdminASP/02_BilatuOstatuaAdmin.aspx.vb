@@ -221,4 +221,8 @@ Public Class WebForm2
         Response.Redirect("02_GehituOstatua.aspx")
 
     End Sub
+
+    Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera0.Click
+        Response.Redirect("03_Mapa.aspx")
+    End Sub
 End Class
