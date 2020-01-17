@@ -106,6 +106,4 @@ Public Class WebForm1
     Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera.Click
         Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
-
-
 End Class

@@ -312,17 +312,17 @@ Public Class WebForm6
 
     End Sub
 
-    Protected Sub ImageButton2_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa.Click
-        Response.Redirect("/01_SartuBezeroa.aspx")
-    End Sub
+    'Protected Sub ImageButton2_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa.Click
+    '    Response.Redirect("/01_SartuBezeroa.aspx")
+    'End Sub
 
-    Protected Sub Calendar1_DayRender(sender As Object, e As DayRenderEventArgs) Handles HasieraCalendar.DayRender
-        quitarFechas(e)
-    End Sub
+    'Protected Sub Calendar1_DayRender(sender As Object, e As DayRenderEventArgs) Handles txtHasieraData_CalendarExtender
+    '    quitarFechas(e)
+    'End Sub
 
-    Protected Sub AmaieraCalendar_SelectionChanged(sender As Object, e As DayRenderEventArgs) Handles AmaieraCalendar.DayRender
-        quitarFechas(e)
-    End Sub
+    'Protected Sub AmaieraCalendar_SelectionChanged(sender As Object, e As DayRenderEventArgs) Handles txtAmaieraData_CalendarExtender
+    '    quitarFechas(e)
+
 
     Sub quitarFechas(e As DayRenderEventArgs)
         If e.Day.Date < Now.Date Then

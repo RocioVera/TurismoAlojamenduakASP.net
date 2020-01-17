@@ -28,6 +28,7 @@ Public Class WebForm4
 
     End Sub
 
+    Protected Sub btnAtzera_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera.Click
 
-    'dgfhg
+    End Sub
 End Class

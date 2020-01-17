@@ -75,6 +75,10 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="4" style="text-align: center">  
+                        ________________________________________________Bezero_Datuak__________________________________________</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" colspan="4" style="text-align: center">  
                         <asp:Label ID="lblHotela" runat="server" Text="Izena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                     &nbsp;<asp:Label ID="lblHotelaIzena" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                     </td>
@@ -86,18 +90,18 @@
                 <tr>
                     <td class="auto-style12">
                         <asp:Label ID="lblHelbidea" runat="server" Text="Helbidea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        &nbsp;<asp:Label ID="lblHelbideaErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                         <br />
-&nbsp;<asp:TextBox ID="txtHelbidea" runat="server" Height="20px" Width="230px"></asp:TextBox>
-                        </td>
+&nbsp;</td>
                     <td class="auto-style13" colspan="2">
                         <asp:Label ID="lblEmail" runat="server" Text="Email:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        &nbsp;<asp:Label ID="lblEmailErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtEmail" runat="server" Height="20px" Width="230px"></asp:TextBox>
                         </td>
                     <td class="auto-style11">
                         <asp:Label ID="lblTelefonoa" runat="server" Text="Telefonoa:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        &nbsp;<asp:Label ID="lbLTelefonoaErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtTelefonoa" runat="server" Height="20px" Width="230px"></asp:TextBox>
                         </td>
                     </tr>
                 <tr>
@@ -140,15 +144,14 @@
                         &nbsp;<asp:Label ID="lblDeskribapenaErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                     &nbsp;<asp:TextBox ID="txtBDeskribapena" runat="server" Height="95px" TextMode="MultiLine" Width="780px" Enabled="False"></asp:TextBox>
                         <br />
-                        ______________________________________________________________________________________________________<br />
+                        _______________________________________________Ostatu_datuak____________________________________________<br />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblPertsonaTot" runat="server" Text="Pertsona totala:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         &nbsp;
-                        <asp:DropDownList ID="DDPertsonaTot" runat="server" Height="27px" Width="84px">
-                        </asp:DropDownList>
+                        <asp:Label ID="lblPertsonaTotErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                         </td>
                     <td class="auto-style11" colspan="2">
                         &nbsp;</td>

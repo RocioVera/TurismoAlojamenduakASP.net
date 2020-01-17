@@ -59,13 +59,13 @@ Partial Public Class WebForm4
     Protected WithEvents lblHelbidea As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtHelbidea.
+    '''Control lblHelbideaErres.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtHelbidea As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblHelbideaErres As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control lblEmail.
@@ -77,13 +77,13 @@ Partial Public Class WebForm4
     Protected WithEvents lblEmail As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtEmail.
+    '''Control lblEmailErres.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblEmailErres As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control lblTelefonoa.
@@ -95,13 +95,13 @@ Partial Public Class WebForm4
     Protected WithEvents lblTelefonoa As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtTelefonoa.
+    '''Control lbLTelefonoaErres.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtTelefonoa As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lbLTelefonoaErres As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control lblMota.
@@ -230,13 +230,13 @@ Partial Public Class WebForm4
     Protected WithEvents lblPertsonaTot As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control DDPertsonaTot.
+    '''Control lblPertsonaTotErres.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DDPertsonaTot As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lblPertsonaTotErres As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control btnAtzera.

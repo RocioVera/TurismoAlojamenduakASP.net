@@ -126,7 +126,6 @@
     <Content Include="02_BilatuOstatua.aspx" />
     <Content Include="03_ErreserbatuOstatua.aspx" />
     <Content Include="03_Mapa.aspx" />
-    <Content Include="WebForm8.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ostatua.vb" />
@@ -197,13 +196,6 @@
     </Compile>
     <Compile Include="03_Mapa.aspx.vb">
       <DependentUpon>03_Mapa.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="WebForm8.aspx.designer.vb">
-      <DependentUpon>WebForm8.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm8.aspx.vb">
-      <DependentUpon>WebForm8.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
