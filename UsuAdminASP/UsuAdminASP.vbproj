@@ -46,6 +46,9 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\programas\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -122,6 +125,8 @@
     <Content Include="03_EditatuOstatuaAdmin.aspx" />
     <Content Include="02_BilatuOstatua.aspx" />
     <Content Include="03_ErreserbatuOstatua.aspx" />
+    <Content Include="03_Mapa.aspx" />
+    <Content Include="WebForm8.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ostatua.vb" />
@@ -185,6 +190,20 @@
     </Compile>
     <Compile Include="03_ErreserbatuOstatua.aspx.vb">
       <DependentUpon>03_ErreserbatuOstatua.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="03_Mapa.aspx.designer.vb">
+      <DependentUpon>03_Mapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_Mapa.aspx.vb">
+      <DependentUpon>03_Mapa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm8.aspx.designer.vb">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm8.aspx.vb">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

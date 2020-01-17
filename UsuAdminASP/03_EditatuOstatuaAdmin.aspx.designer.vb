@@ -23,6 +23,15 @@ Partial Public Class WebForm5
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control lblEguneratu.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblEguneratu As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control lblSignatura.
     '''</summary>
     '''<remarks>
@@ -228,6 +237,15 @@ Partial Public Class WebForm5
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtPostaKodea As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control ddlPostaKodea.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlPostaKodea As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control lblDeskribapena.

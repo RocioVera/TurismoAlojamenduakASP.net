@@ -23,6 +23,15 @@ Partial Public Class WebForm4
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control lblErreserbaOnartu.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblErreserbaOnartu As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control lblHotela.
     '''</summary>
     '''<remarks>
@@ -41,38 +50,209 @@ Partial Public Class WebForm4
     Protected WithEvents lblHotelaIzena As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control lblHasieraData.
+    '''Control lblHelbidea.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblHasieraData As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblHelbidea As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control HasieraCalendar.
+    '''Control txtHelbidea.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents HasieraCalendar As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents txtHelbidea As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control lblAmaieraData.
+    '''Control lblEmail.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblAmaieraData As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblEmail As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control AmaieraCalendar.
+    '''Control txtEmail.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents AmaieraCalendar As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblTelefonoa.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblTelefonoa As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control txtTelefonoa.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtTelefonoa As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblMota.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMota As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblMotaErres.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMotaErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblMarka.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMarka As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblMarkaErres.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMarkaErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblProbintziak.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblProbintziak As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblProbintziaErres.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblProbintziaErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblHerriak.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblHerriak As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblHerriaErres.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblHerriaErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblPostaKodea.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblPostaKodea As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblPostaKodeaErres.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblPostaKodeaErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblDeskribapena.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblDeskribapena As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblDeskribapenaErres.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblDeskribapenaErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control txtBDeskribapena.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtBDeskribapena As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblPertsonaTot.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblPertsonaTot As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control DDPertsonaTot.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DDPertsonaTot As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control btnAtzera.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnAtzera As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''Control BtnErreserbatu.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnErreserbatu As Global.System.Web.UI.WebControls.Button
 End Class

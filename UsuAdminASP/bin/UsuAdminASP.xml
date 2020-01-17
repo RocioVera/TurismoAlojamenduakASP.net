@@ -217,6 +217,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:UsuAdminASP.WebForm5._lblEguneratu">
+<summary>
+Control lblEguneratu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:UsuAdminASP.WebForm5._lblSignatura">
 <summary>
 Control lblSignatura.
@@ -424,6 +433,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:UsuAdminASP.WebForm5._ddlPostaKodea">
+<summary>
+Control ddlPostaKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:UsuAdminASP.WebForm5._lblDeskribapena">
 <summary>
 Control lblDeskribapena.
@@ -586,6 +604,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:UsuAdminASP.WebForm6._imgBtnAtzera0">
+<summary>
+Control imgBtnAtzera0.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm6._HasieraCalendar">
+<summary>
+Control HasieraCalendar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:UsuAdminASP.WebForm6._imgBtnHasiSaioa">
 <summary>
 Control imgBtnHasiSaioa.
@@ -649,27 +685,36 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._lblHasieraData">
+<member name="F:UsuAdminASP.WebForm6._txtHasieraData">
 <summary>
-Control lblHasieraData.
+Control txtHasieraData.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._HasieraCalendar">
+<member name="F:UsuAdminASP.WebForm6._imgBtnHasiera">
 <summary>
-Control HasieraCalendar.
+Control imgBtnHasiera.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._lblAmaieraData">
+<member name="F:UsuAdminASP.WebForm6._txtAmaieraData">
 <summary>
-Control lblAmaieraData.
+Control txtAmaieraData.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm6._imgBtnAmaiera">
+<summary>
+Control imgBtnAmaiera.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -703,6 +748,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:UsuAdminASP.WebForm4._lblErreserbaOnartu">
+<summary>
+Control lblErreserbaOnartu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:UsuAdminASP.WebForm4._lblHotela">
 <summary>
 Control lblHotela.
@@ -721,36 +775,261 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm4._lblHasieraData">
+<member name="F:UsuAdminASP.WebForm4._lblHelbidea">
 <summary>
-Control lblHasieraData.
+Control lblHelbidea.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm4._HasieraCalendar">
+<member name="F:UsuAdminASP.WebForm4._txtHelbidea">
 <summary>
-Control HasieraCalendar.
+Control txtHelbidea.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm4._lblAmaieraData">
+<member name="F:UsuAdminASP.WebForm4._lblEmail">
 <summary>
-Control lblAmaieraData.
+Control lblEmail.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm4._AmaieraCalendar">
+<member name="F:UsuAdminASP.WebForm4._txtEmail">
 <summary>
-Control AmaieraCalendar.
+Control txtEmail.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblTelefonoa">
+<summary>
+Control lblTelefonoa.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._txtTelefonoa">
+<summary>
+Control txtTelefonoa.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblMota">
+<summary>
+Control lblMota.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._txtMota">
+<summary>
+Control txtMota.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblMarka">
+<summary>
+Control lblMarka.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._txtMarka">
+<summary>
+Control txtMarka.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblProbintziak">
+<summary>
+Control lblProbintziak.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._ddlProbintzia">
+<summary>
+Control ddlProbintzia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblHerriak">
+<summary>
+Control lblHerriak.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._ddlHerria">
+<summary>
+Control ddlHerria.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblHerriKodea">
+<summary>
+Control lblHerriKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._txtHerriKodea">
+<summary>
+Control txtHerriKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._ddlHerriKodea">
+<summary>
+Control ddlHerriKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblPostaKodea">
+<summary>
+Control lblPostaKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._txtPostaKodea">
+<summary>
+Control txtPostaKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._ddlPostaKodea">
+<summary>
+Control ddlPostaKodea.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblDeskribapena">
+<summary>
+Control lblDeskribapena.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._txtBDeskribapena">
+<summary>
+Control txtBDeskribapena.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._lblPertsonaTot">
+<summary>
+Control lblPertsonaTot.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._DDPertsonaTot">
+<summary>
+Control DDPertsonaTot.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._btnAtzera">
+<summary>
+Control btnAtzera.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm4._BtnErreserbatu">
+<summary>
+Control BtnErreserbatu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm7._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm7._imgBtnAtzera">
+<summary>
+Control imgBtnAtzera.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm7._GridView1">
+<summary>
+Control GridView1.
 </summary>
 <remarks>
 Campo generado automáticamente.

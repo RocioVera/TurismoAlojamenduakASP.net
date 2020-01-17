@@ -257,4 +257,8 @@ Public Class WebForm5
     Protected Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
 
     End Sub
+
+    Protected Sub txtIzena_TextChanged(sender As Object, e As EventArgs) Handles txtIzena.TextChanged
+
+    End Sub
 End Class

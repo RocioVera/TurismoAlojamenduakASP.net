@@ -29,11 +29,5 @@ Public Class WebForm4
     End Sub
 
 
-    Protected Sub AmaieraCalendar_SelectionChanged1(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Protected Sub HasieraCalendar_VisibleMonthChanged(sender As Object, e As MonthChangedEventArgs) Handles HasieraCalendar.VisibleMonthChanged
-
-    End Sub
 End Class

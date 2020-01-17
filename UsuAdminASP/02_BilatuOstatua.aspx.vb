@@ -212,13 +212,18 @@ Public Class WebForm6
         Else
             HerriaGuztiakKargatu()
         End If
+        taulaGehitu()
+
     End Sub
 
 
     Protected Sub ddlMota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlMota.SelectedIndexChanged
         Dim sql As String
         sql = "SELECT DISTINCT(mota) FROM ostatuak WHERE upper(mota) Like upper('" & ddlMota.SelectedItem.Text.ToUpper & "') ORDER BY mota"
-        MotaDropDownGehitu(sql)
+        taulaGehitu()
+
+        '  MotaDropDownGehitu(sql)
+
     End Sub
 
     Protected Sub imagebuttonbilatu_Click(sender As Object, e As ImageClickEventArgs) Handles imagebuttonbilatu.Click
@@ -324,4 +329,11 @@ Public Class WebForm6
             e.Day.IsSelectable = False
         End If
     End Sub
+
+
+    Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera0.Click
+        Response.Redirect("03_Mapa.aspx")
+
+    End Sub
+
 End Class

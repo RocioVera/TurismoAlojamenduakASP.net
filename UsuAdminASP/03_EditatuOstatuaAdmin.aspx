@@ -55,6 +55,11 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2" colspan="4" style="text-align: center">  
+                        <asp:Label ID="lblEguneratu" runat="server" ForeColor="White" Height="36px" style="font-size: xx-large; font-weight: 700; margin-bottom: 0px;" Text="Datuak eguneratu" Width="283px" ></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" colspan="4" style="text-align: center">  
                         <asp:Label ID="lblSignatura" runat="server" Text="Signatura:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                     &nbsp;<asp:Label ID="lblSignaturaID" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                     </td>
@@ -127,14 +132,17 @@
                         <asp:Label ID="lblPostaKodea" runat="server" Text="Posta kodea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
                         <asp:TextBox ID="txtPostaKodea" runat="server" Height="20px" Width="250px"></asp:TextBox>
+        <asp:DropDownList ID="ddlPostaKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px">
+            <asp:ListItem>Posta kodeak</asp:ListItem>
+        </asp:DropDownList>
                         </td>
                     </tr>
                 <tr>
                     <td class="auto-style2" colspan="4">  
                         <asp:Label ID="lblDeskribapena" runat="server" Text="Deskribapena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         &nbsp;<br />
-                        &nbsp;<asp:TextBox ID="txtBDeskribapena" runat="server" Height="102px" Width="782px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="txtBDeskribapena" runat="server" Height="95px" TextMode="MultiLine" Width="780px"></asp:TextBox>
                         <br />
                         ______________________________________________________________________________________________________<br />
                     </td>

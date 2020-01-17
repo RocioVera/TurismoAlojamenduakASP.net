@@ -32,6 +32,15 @@ Partial Public Class WebForm6
     Protected WithEvents imgBtnAtzera As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
+    '''Control imgBtnAtzera0.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents imgBtnAtzera0 As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
     '''Control imgBtnHasiSaioa.
     '''</summary>
     '''<remarks>
@@ -95,40 +104,67 @@ Partial Public Class WebForm6
     Protected WithEvents ddlHerria As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control lblHasieraData.
+    '''Control ScriptManager1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblHasieraData As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
-    '''Control HasieraCalendar.
+    '''Control txtHasieraData.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents HasieraCalendar As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents txtHasieraData As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control lblAmaieraData.
+    '''Control txtHasieraData_CalendarExtender.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblAmaieraData As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtHasieraData_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
 
     '''<summary>
-    '''Control AmaieraCalendar.
+    '''Control imgBtnHasiera.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents AmaieraCalendar As Global.System.Web.UI.WebControls.Calendar
+    Protected WithEvents imgBtnHasiera As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''Control txtAmaieraData.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtAmaieraData As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtAmaieraData_CalendarExtender.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtAmaieraData_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
+
+    '''<summary>
+    '''Control imgBtnAmaiera.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents imgBtnAmaiera As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
     '''Control GridViewDatuak.
