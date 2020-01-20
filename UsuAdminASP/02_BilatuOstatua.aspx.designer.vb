@@ -41,6 +41,15 @@ Partial Public Class WebForm6
     Protected WithEvents imgBtnAtzera0 As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
+    '''Control imgBtnDatuaIkusi.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents imgBtnDatuaIkusi As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
     '''Control imgBtnHasiSaioa.
     '''</summary>
     '''<remarks>

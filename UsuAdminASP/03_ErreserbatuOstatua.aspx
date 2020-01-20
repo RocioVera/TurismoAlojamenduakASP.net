@@ -26,6 +26,12 @@
             width: 403px;
         }
 
+        .auto-style2 {
+            height: 40px;
+            margin-left: 200px;
+            width: 403px;
+        }
+
         .auto-style8 {
             position: absolute;
             top: 6%;
@@ -52,12 +58,18 @@
             margin-left: 40px;
         }
         .auto-style14 {
+            height: 40px;
             margin-left: 200px;
             width: 403px;
         }
         </style>
 </head>
-<body style ="background-image:url(Argazkiak/03_BilatuOstatua.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
+<body style ="        background-image: url(Argazkiak/03_BilatuOstatua.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+">
     <form id="form1" runat="server">
         <div>
         </div>
@@ -78,15 +90,34 @@
                         ________________________________________________Bezero_Datuak__________________________________________</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" colspan="4" style="text-align: center">  
-                        <asp:Label ID="lblHotela" runat="server" Text="Izena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                    &nbsp;<asp:Label ID="lblHotelaIzena" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
+                    <td class="auto-style2" colspan="2" style="text-align: center">  
+                        <asp:Label ID="lblBezeroa" runat="server" Text="Bezero izena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        <asp:Label ID="lblBezeroIzena" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
+                    </td>
+                    <td class="auto-style2" colspan="2" style="text-align: center">  
+                        <asp:Label ID="lblBezeroEmail" runat="server" Text="Bezero email:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        &nbsp;<asp:Label ID="lblEmailErres0" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style14" colspan="4" style="text-align: center">  
+                    <td class="auto-style2" colspan="2" style="text-align: center">  
+                        <asp:Label ID="lblPertsonaTot" runat="server" Text="Pertsona totala:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        &nbsp;
+                        <asp:Label ID="lblPertsonaTotErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
                     </td>
+                    <td class="auto-style2" colspan="2" style="text-align: center">  
+                        &nbsp;</td>
                 </tr>
+                <tr>
+                    <td class="auto-style14" colspan="4" style="text-align: center">  
+                        _______________________________________________Ostatu_datuak____________________________________________</td>
+                </tr>
+                <tr>
+                    <td class="auto-style11" colspan="4">
+                        <asp:Label ID="lblHotela" runat="server" Text="Izena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
+                        <asp:Label ID="lblHotelaIzena" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
+                    </td>
+                    </tr>
                 <tr>
                     <td class="auto-style12">
                         <asp:Label ID="lblHelbidea" runat="server" Text="Helbidea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
@@ -140,19 +171,11 @@
                     </tr>
                 <tr>
                     <td class="auto-style2" colspan="4">  
-                        <asp:Label ID="lblDeskribapena" runat="server" Text="Deskribapena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        &nbsp;<asp:Label ID="lblDeskribapenaErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
-                    &nbsp;<asp:TextBox ID="txtBDeskribapena" runat="server" Height="95px" TextMode="MultiLine" Width="780px" Enabled="False"></asp:TextBox>
-                        <br />
-                        _______________________________________________Ostatu_datuak____________________________________________<br />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style11" colspan="2">
-                        <asp:Label ID="lblPertsonaTot" runat="server" Text="Pertsona totala:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        &nbsp;
-                        <asp:Label ID="lblPertsonaTotErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
-                        </td>
+                        &nbsp;</td>
                     <td class="auto-style11" colspan="2">
                         &nbsp;</td>
                 </tr>

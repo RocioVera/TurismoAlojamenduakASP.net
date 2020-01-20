@@ -32,6 +32,60 @@ Partial Public Class WebForm4
     Protected WithEvents lblErreserbaOnartu As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control lblBezeroa.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblBezeroa As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblBezeroIzena.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblBezeroIzena As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblBezeroEmail.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblBezeroEmail As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblEmailErres0.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblEmailErres0 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblPertsonaTot.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblPertsonaTot As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblPertsonaTotErres.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblPertsonaTotErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control lblHotela.
     '''</summary>
     '''<remarks>
@@ -192,51 +246,6 @@ Partial Public Class WebForm4
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblPostaKodeaErres As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control lblDeskribapena.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblDeskribapena As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control lblDeskribapenaErres.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblDeskribapenaErres As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control txtBDeskribapena.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtBDeskribapena As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control lblPertsonaTot.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblPertsonaTot As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control lblPertsonaTotErres.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblPertsonaTotErres As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control btnAtzera.

@@ -362,10 +362,16 @@ Public Class WebForm6
                 imgBtnHasiSaioa.ImageUrl = "~/Argazkiak/hasiSaioa.png"
             Else
                 imgBtnHasiSaioa.ImageUrl = "~/Argazkiak/cerrarSesion.png"
+                imgBtnDatuaIkusi.Visible = True
             End If
         Catch ex As Exception
             MsgBox("Mal")
         End Try
     End Sub
 
+    Protected Sub imgBtnDatuaIkusi_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnDatuaIkusi.Click
+        ' sartutakoBezeroa = Session("sartutakoBezeroa")
+        'Session.Add("sartutakoBezeroa", sartutakoBezeroa)
+        Response.Redirect("03_BezeroDatuak.aspx")
+    End Sub
 End Class

@@ -12,15 +12,17 @@ Public Class WebForm8
     Dim komando As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim data As New DataSet
+    Dim sartutakoBezeroa As New Bezeroa
+
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         taulaGehitu()
     End Sub
 
     Private Sub taulaGehitu()
-        'Dim nan As String = Session("nan")
-        Dim nan As String = "12312312"
         Try
+            sartutakoBezeroa = Session("sartutakoBezeroa")
+
             'bilatu botoia sakatzean, konexioa sortuko du
             cnn1 = New MySqlConnection(server)
             cnn1.Open()
@@ -28,9 +30,9 @@ Public Class WebForm8
             Dim sql As String
             Dim cmd2 As New MySqlCommand
 
-            MsgBox(AES_Encrypt(nan, "encriptado"))
+            MsgBox(AES_Encrypt(sartutakoBezeroa.nan, "encriptado"))
             'sql komandoa idazten da
-            sql = "SELECT DISTINCT o.ostatu_izena, o.ostatu_helbidea, e.id_erreserba, e.data_amaiera, e.data_hasiera, e.erreserba_prezio_tot, e.pertsona_kant_erres FROM erreserbak e, ostatuak o WHERE e.erabiltzaileak_nan = '" + AES_Encrypt(nan, "encriptado") + "' AND o.id_signatura = e.ostatuak_id_signatura"
+            sql = "SELECT DISTINCT o.ostatu_izena, o.ostatu_helbidea, e.id_erreserba, e.data_amaiera, e.data_hasiera, e.erreserba_prezio_tot, e.pertsona_kant_erres FROM erreserbak e, ostatuak o WHERE e.erabiltzaileak_nan = '" + AES_Encrypt(sartutakoBezeroa.nan, "encriptado") + "' AND o.id_signatura = e.ostatuak_id_signatura"
 
             cmd2 = New MySqlCommand(sql, cnn1)
             adapter = New MySqlDataAdapter(cmd2)
@@ -66,24 +68,18 @@ Public Class WebForm8
         End Try
     End Function
 
-    Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
+    Protected Sub imgBtnAtzera1_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera.Click
+        'Dim sartutakoBezeroa As String = Session("sartutakoBezeroa")
 
+        'Session.Add("sartutakoBezeroa", sartutakoBezeroa)
+        Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
 
-    Protected Sub imgBtnAtzera1_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera1.Click
-        Dim sartutakoBezeroa As String = Session("sartutakoBezeroa")
-
-        Session.Add("sartutakoBezeroa", sartutakoBezeroa)
-        Response.Redirect("02_BIlatuOstatua")
-    End Sub
-
-    Protected Sub imgBtnHasiSaioa0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa0.Click
+    Protected Sub imgBtnHasiSaioa_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa.Click
         Dim gonbidatuNan As String = "00000000"
         Dim gonbidatuIzena As String = "GONBIDATUA"
         Dim sartutakoBezeroa As New Bezeroa(gonbidatuNan, gonbidatuIzena)
         Session.Add("sartutakoBezeroa", sartutakoBezeroa)
-        Response.Redirect("02_BIlatuOstatua")
-        'poner el bezero a 0000
-
+        Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
 End Class
