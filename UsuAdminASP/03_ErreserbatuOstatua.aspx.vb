@@ -31,4 +31,8 @@ Public Class WebForm4
     Protected Sub btnAtzera_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera.Click
 
     End Sub
+
+    Protected Sub BtnErreserbatu_Click(sender As Object, e As EventArgs) Handles BtnErreserbatu.Click
+
+    End Sub
 End Class

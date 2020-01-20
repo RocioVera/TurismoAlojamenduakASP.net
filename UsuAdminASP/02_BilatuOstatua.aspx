@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
   <div id="bilaketalbl" style="justify-content: center; align-items: center; margin: auto; justify-content: center; align-content: center" class="auto-style1">
 
-            <br />
+            g<br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:ImageButton ID="imgBtnAtzera" runat="server" Height="33px" ImageUrl="~/Argazkiak/atzera.png" Width="49px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:ImageButton ID="imgBtnAtzera0" runat="server" Height="37px" ImageUrl="~/Argazkiak/lurra.png" Width="48px" BackColor="#EFF3FB" BorderColor="Black" BorderWidth="2px" />
@@ -59,15 +59,13 @@
             runat="server"
             >
         </asp:ScriptManager>
-            <asp:TextBox ID="txtHasieraData" runat="server" Width="166px" Height="17px"></asp:TextBox>
-            <ajaxToolkit:CalendarExtender ID="txtHasieraData_CalendarExtender" runat="server" BehaviorID="txtHasieraData_CalendarExtender" TargetControlID="txtHasieraData"  PopupButtonID="imgBtnHasiera" PopupPosition="BottomLeft" Format="dd/MMM/yyyy">
+            <asp:TextBox ID="txtHasieraData" runat="server" Width="181px" Height="16px"></asp:TextBox>
+            <ajaxToolkit:CalendarExtender ID="txtHasieraData_CalendarExtender" runat="server" BehaviorID="txtHasieraData_CalendarExtender" TargetControlID="txtHasieraData"  PopupButtonID="imgBtnHasiera" PopupPosition="BottomLeft" Format="dd/MM/yyyy">
             </ajaxToolkit:CalendarExtender>
-        <asp:ImageButton ID="imgBtnHasiera" runat="server" Height="18px" ImageUrl="~/Argazkiak/beheraGezia.png" Width="16px" BackColor="White" />
             &nbsp;
-            <asp:TextBox ID="txtAmaieraData" runat="server" Width="170px" Height="17px"></asp:TextBox>
-            <ajaxToolkit:CalendarExtender ID="txtAmaieraData_CalendarExtender" runat="server" BehaviorID="txtAmaieraData_CalendarExtender" TargetControlID="txtAmaieraData"   PopupButtonID="imgBtnAmaiera" PopupPosition="BottomLeft" Format="dd/MMM/yyyy">
+            <asp:TextBox ID="txtAmaieraData" runat="server" Width="171px" Height="16px"></asp:TextBox>
+            <ajaxToolkit:CalendarExtender ID="txtAmaieraData_CalendarExtender" runat="server" BehaviorID="txtAmaieraData_CalendarExtender" TargetControlID="txtAmaieraData"   PopupButtonID="imgBtnAmaiera" PopupPosition="BottomLeft" Format="dd/MM/yyyy">
             </ajaxToolkit:CalendarExtender>
-        <asp:ImageButton ID="imgBtnAmaiera" runat="server" Height="16px" ImageUrl="~/Argazkiak/beheraGezia.png" Width="16px" BackColor="White" />
             <br />
             <br />
             <asp:GridView ID="GridViewDatuak" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="96px" PageSize="25" Width="1319px" AllowPaging="True" EmptyDataText="Zuk filtratutakoekin ez daude ostaturik erakusteko, aldatu eta barkatu eragozpenak" Style="margin-left: 0px">

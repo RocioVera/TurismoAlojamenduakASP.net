@@ -712,15 +712,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._imgBtnHasiera">
-<summary>
-Control imgBtnHasiera.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:UsuAdminASP.WebForm6._txtAmaieraData">
 <summary>
 Control txtAmaieraData.
@@ -733,15 +724,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:UsuAdminASP.WebForm6._txtAmaieraData_CalendarExtender">
 <summary>
 Control txtAmaieraData_CalendarExtender.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:UsuAdminASP.WebForm6._imgBtnAmaiera">
-<summary>
-Control imgBtnAmaiera.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -1021,6 +1003,33 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:UsuAdminASP.WebForm7._GridView1">
 <summary>
 Control GridView1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm8._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm8._lbl">
+<summary>
+Control lbl.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:UsuAdminASP.WebForm8._GridViewDatuak">
+<summary>
+Control GridViewDatuak.
 </summary>
 <remarks>
 Campo generado automáticamente.

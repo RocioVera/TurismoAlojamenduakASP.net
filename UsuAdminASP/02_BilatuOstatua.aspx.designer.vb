@@ -131,15 +131,6 @@ Partial Public Class WebForm6
     Protected WithEvents txtHasieraData_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
 
     '''<summary>
-    '''Control imgBtnHasiera.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents imgBtnHasiera As Global.System.Web.UI.WebControls.ImageButton
-
-    '''<summary>
     '''Control txtAmaieraData.
     '''</summary>
     '''<remarks>
@@ -156,15 +147,6 @@ Partial Public Class WebForm6
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtAmaieraData_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
-
-    '''<summary>
-    '''Control imgBtnAmaiera.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents imgBtnAmaiera As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
     '''Control GridViewDatuak.

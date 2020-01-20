@@ -126,6 +126,7 @@
     <Content Include="02_BilatuOstatua.aspx" />
     <Content Include="03_ErreserbatuOstatua.aspx" />
     <Content Include="03_Mapa.aspx" />
+    <Content Include="03_BezeroDatuak.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ostatua.vb" />
@@ -196,6 +197,13 @@
     </Compile>
     <Compile Include="03_Mapa.aspx.vb">
       <DependentUpon>03_Mapa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="03_BezeroDatuak.aspx.designer.vb">
+      <DependentUpon>03_BezeroDatuak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_BezeroDatuak.aspx.vb">
+      <DependentUpon>03_BezeroDatuak.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
