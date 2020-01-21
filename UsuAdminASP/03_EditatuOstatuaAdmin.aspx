@@ -123,15 +123,13 @@
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblHerriKodea" runat="server" Text="Herri kodea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtHerriKodea" runat="server" Height="20px" Width="250px"></asp:TextBox>
-        <asp:DropDownList ID="ddlHerriKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px">
+                        &nbsp;<asp:DropDownList ID="ddlHerriKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px">
             <asp:ListItem>Herri kodeak</asp:ListItem>
         </asp:DropDownList>
                         </td>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblPostaKodea" runat="server" Text="Posta kodea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtPostaKodea" runat="server" Height="20px" Width="250px"></asp:TextBox>
         <asp:DropDownList ID="ddlPostaKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px">
             <asp:ListItem>Posta kodeak</asp:ListItem>
         </asp:DropDownList>

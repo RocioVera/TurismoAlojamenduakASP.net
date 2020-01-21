@@ -13,16 +13,19 @@ Public Class WebForm4
     Dim ostatuaSignatura As String
     Dim ostatuIzena As String
     Dim pertsonaTotala As String
-    Dim erreserbaPrezioa As Double
+    Dim erreserbaPrezioa As Double = 10.5
+    Dim hasieraData, amaieraData As Date
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Randomize()
-        erreserbaPrezioa = CInt(Int((Rnd() * 300) + 80))
+        erreserbaPrezioa = CInt(Int((Rnd() * 300.0) + 80.0))
         Try
             ostatuaSignatura = Session("ostatuaSignatura")
             ostatuIzena = Session("ostatuIzena")
             sartutakoBezeroa = Session("sartutakoBezeroa")
             pertsonaTotala = CInt(Session("pertsonaTotala"))
+            hasieraData = Session("hasieraData")
+            amaieraData = Session("amaieraData")
 
             lblPertsonaTotErres.Text = pertsonaTotala
             ostatuaAtera()
@@ -65,10 +68,6 @@ Public Class WebForm4
                     lblHerriaErres.Text = das1.GetString(7)
                     lblPostaKodeaErres.Text = das1.GetString(8)
                 End While
-
-            Else
-                'Errore mezua
-                MsgBox("Datu okerrak")
             End If
 
         Catch ex As Exception
@@ -78,8 +77,6 @@ Public Class WebForm4
     End Sub
 
     Sub BezeroaAtera()
-        MsgBox(sartutakoBezeroa.nan)
-
         Try
             'Konexioa egin
             cnn1 = New MySqlConnection(server)
@@ -88,7 +85,6 @@ Public Class WebForm4
             'Konexioarekin komandoa egin
             Dim cmd1 = cnn1.CreateCommand()
             Dim userencriptado = AES_Encrypt(sartutakoBezeroa.nan, "encriptado")
-            MsgBox(userencriptado)
 
             'SQL komandoa
             Dim sql As String = "SELECT nan, erabil_email FROM Erabiltzaileak WHERE nan = '" & userencriptado & "' "
@@ -106,9 +102,6 @@ Public Class WebForm4
                     lblBezeroNan.Text = sartutakoBezeroa.nan
 
                 End While
-            Else
-                'Errore mezua
-                MsgBox("Datu okerrak")
             End If
 
         Catch ex As Exception
@@ -120,6 +113,30 @@ Public Class WebForm4
 
     Protected Sub btnAtzera_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera.Click
         Response.Redirect("02_BilatuOstatua.aspx")
+    End Sub
+
+    Protected Sub btnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles btnAtzera0.Click
+        Dim connection As New MySqlConnection(server)
+        Try
+            connection.Open()
+            Dim command As New MySqlCommand("INSERT INTO erreserbak(DATA_AMAIERA, DATA_HASIERA, ERRESERBA_PREZIO_TOT, PERTSONA_KANT_ERRES, OSTATUAK_ID_SIGNATURA, ERABILTZAILEAK_NAN) VALUES (@dataAmaiera, @dataHasiera, @erreserbaPrezioa, @pertsonaKant, @idSignatura, @erabiltzaileNan)", connection)
+
+            'Erabiltzaile eremuko textua parametro bezala jarri
+            command.Parameters.Add("@dataAmaiera", MySqlDbType.Date).Value = amaieraData
+            command.Parameters.Add("@dataHasiera", MySqlDbType.Date).Value = hasieraData
+            command.Parameters.Add("@erreserbaPrezioa", MySqlDbType.Double).Value = erreserbaPrezioa
+            command.Parameters.Add("@pertsonaKant", MySqlDbType.Int64).Value = pertsonaTotala
+            command.Parameters.Add("@idSignatura", MySqlDbType.VarChar).Value = ostatuaSignatura
+            command.Parameters.Add("@erabiltzaileNan", MySqlDbType.VarChar).Value = AES_Encrypt(sartutakoBezeroa.nan, "encriptado")
+
+            command.ExecuteNonQuery()
+
+            Response.Redirect("02_BilatuOstatua.aspx")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connection.Close()
+        End Try
     End Sub
 
     Public Function AES_Encrypt(ByVal input As String, ByVal pass As String) As String
@@ -159,6 +176,5 @@ Public Class WebForm4
         Catch ex As Exception
         End Try
     End Function
-
 
 End Class

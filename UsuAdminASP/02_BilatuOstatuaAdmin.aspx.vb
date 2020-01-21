@@ -22,7 +22,6 @@ Public Class WebForm2
             taulaGehitu()
         End If
     End Sub
-
     Private Sub HerriDropDownGehitu(sql As String)
         Try
             ddlHerria.Items.Clear()
@@ -78,8 +77,8 @@ Public Class WebForm2
             MsgBox(ex.ToString)
             cnn1.Close()
         End Try
-
     End Sub
+
 
     Private Sub ProbintziaKargatu()
         Try
@@ -127,7 +126,6 @@ Public Class WebForm2
         sql = "SELECT DISTINCT(mota) FROM ostatuak"
         MotaDropDownGehitu(sql)
     End Sub
-
     Protected Sub ddlProbintzia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlProbintzia.SelectedIndexChanged
         If ddlProbintzia.SelectedItem.Text <> "Probintzia" Then
             Dim sql As String
@@ -136,13 +134,15 @@ Public Class WebForm2
         Else
             HerriaGuztiakKargatu()
         End If
+        taulaGehitu()
+
     End Sub
 
 
     Protected Sub ddlMota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlMota.SelectedIndexChanged
         Dim sql As String
         sql = "SELECT DISTINCT(mota) FROM ostatuak WHERE upper(mota) Like upper('" & ddlMota.SelectedItem.Text.ToUpper & "') ORDER BY mota"
-        MotaDropDownGehitu(sql)
+        taulaGehitu()
     End Sub
 
     Protected Sub imagebuttonbilatu_Click(sender As Object, e As ImageClickEventArgs) Handles imagebuttonbilatu.Click
@@ -193,6 +193,8 @@ Public Class WebForm2
         End Try
     End Sub
 
+
+
     Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
         Response.Redirect("01_SartuBezeroa.aspx")
     End Sub
@@ -216,6 +218,7 @@ Public Class WebForm2
         taulaGehitu()
 
     End Sub
+
 
     Protected Sub ImageButton2_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton2.Click
         Response.Redirect("02_GehituOstatua.aspx")

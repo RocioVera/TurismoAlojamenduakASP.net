@@ -41,20 +41,15 @@ Public Class WebForm1
                     Dim bez As New Bezeroa(AES_Decrypt(das1.GetString(0), "encriptado"), AES_Decrypt(das1.GetString(1), "encriptado"), AES_Decrypt(das1.GetString(2), "encriptado"), das1.GetInt32(3), AES_Decrypt(das1.GetString(4), "encriptado"), AES_Decrypt(das1.GetString(5), "encriptado"))
                     Session.Add("sartutakoBezeroa", bez)
                     If (bez.baimena = 0) Then 'superAdmin
-                        MsgBox("Baimena superAdmin:" & bez.baimena)
                         Response.Redirect("02_BilatuOstatuaAdmin.aspx")
                     ElseIf (bez.baimena = 1) Then 'gonbidatuak
-                        MsgBox("Baimena gonbidatuak:" & bez.baimena)
                         Response.Redirect("02_BilatuOstatua.aspx")
                     ElseIf (bez.baimena = 2) Then ' bezeronormala
-                        MsgBox("Baimena bezero normala:" & bez.baimena)
                         Response.Redirect("02_BilatuOstatua.aspx")
                     End If
                 End While
             Else
                 lblErroreMezua.Visible = True
-                'Errore mezua
-                MsgBox("Datu okerrak")
             End If
 
         Catch ex As Exception

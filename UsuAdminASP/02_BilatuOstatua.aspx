@@ -60,14 +60,15 @@
             runat="server"
             >
         </asp:ScriptManager>
-            <asp:TextBox ID="txtHasieraData" runat="server" Width="181px" Height="16px"></asp:TextBox>
-            <ajaxToolkit:CalendarExtender ID="txtHasieraData_CalendarExtender" runat="server" BehaviorID="txtHasieraData_CalendarExtender" TargetControlID="txtHasieraData"  PopupButtonID="imgBtnHasiera" PopupPosition="BottomLeft" Format="dd/MM/yyyy">
+            <asp:TextBox ID="txtHasieraData" runat="server" Width="100px" Height="16px"></asp:TextBox>
+            <ajaxToolkit:CalendarExtender ID="txtHasieraData_CalendarExtender" runat="server" BehaviorID="txtHasieraData_CalendarExtender" TargetControlID="txtHasieraData"  PopupButtonID="imgBtnHasiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
             </ajaxToolkit:CalendarExtender>
             &nbsp;
-            <asp:TextBox ID="txtAmaieraData" runat="server" Width="171px" Height="16px"></asp:TextBox>
-            <ajaxToolkit:CalendarExtender ID="txtAmaieraData_CalendarExtender" runat="server" BehaviorID="txtAmaieraData_CalendarExtender" TargetControlID="txtAmaieraData"   PopupButtonID="imgBtnAmaiera" PopupPosition="BottomLeft" Format="dd/MM/yyyy">
+            <asp:TextBox ID="txtAmaieraData" runat="server" Width="100px" Height="16px"></asp:TextBox>
+            <ajaxToolkit:CalendarExtender ID="txtAmaieraData_CalendarExtender" runat="server" BehaviorID="txtAmaieraData_CalendarExtender" TargetControlID="txtAmaieraData"   PopupButtonID="imgBtnAmaiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
             </ajaxToolkit:CalendarExtender>
-            &nbsp;<asp:DropDownList ID="ddlPertsonaKant" runat="server" Height="25px" Width="58px" AutoPostBack="True">
+            &nbsp;<asp:Label ID="lblPertsonaTot" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="13pt" ForeColor="Black" BackColor="White">Pertsona totalak:</asp:Label>
+                    &nbsp;<asp:DropDownList ID="ddlPertsonaKant" runat="server" Height="25px" Width="58px" AutoPostBack="True">
         </asp:DropDownList>
             <br />
             <br />

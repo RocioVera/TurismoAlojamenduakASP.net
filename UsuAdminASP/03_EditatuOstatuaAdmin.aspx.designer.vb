@@ -203,15 +203,6 @@ Partial Public Class WebForm5
     Protected WithEvents lblHerriKodea As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtHerriKodea.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtHerriKodea As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Control ddlHerriKodea.
     '''</summary>
     '''<remarks>
@@ -228,15 +219,6 @@ Partial Public Class WebForm5
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblPostaKodea As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control txtPostaKodea.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtPostaKodea As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control ddlPostaKodea.

@@ -58,7 +58,7 @@
                     &nbsp;&nbsp;
                     </td>
                     <td class="auto-style5">&nbsp;
-                        <asp:TextBox ID="txtBezeroa" runat="server" Width="166px" BackColor="#F8ECD4" Height="20px">12312312</asp:TextBox>
+                        <asp:TextBox ID="txtBezeroa" runat="server" Width="166px" BackColor="#F8ECD4" Height="20px">11111111</asp:TextBox>
                     </td>
                 </tr>
                 <tr>

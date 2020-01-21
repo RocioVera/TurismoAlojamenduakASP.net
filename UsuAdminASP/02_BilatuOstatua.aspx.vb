@@ -16,6 +16,8 @@ Public Class WebForm6
     Dim gonbidatuNan As String = "00000000"
     Dim gonbidatuIzena As String = "GONBIDATUA"
     Dim gonbidapenBezeroa As New Bezeroa(gonbidatuNan, gonbidatuIzena)
+    Dim gaurkoData = DateAdd("d", 0, Format(Now, "yyyy-MM-dd"))
+    Dim biharkoData = DateAdd("d", 1, Format(Now, "yyyy-MM-dd"))
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -28,6 +30,9 @@ Public Class WebForm6
             HerriaGuztiakKargatu()
             MotaGuztiakKargatu()
             taulaGehitu()
+            txtHasieraData.Text = gaurkoData
+            txtAmaieraData.Text = biharkoData
+
         End If
     End Sub
 
@@ -56,12 +61,7 @@ Public Class WebForm6
             If das1.HasRows() Then
                 While das1.Read()
                     sartutakoBezeroa = New Bezeroa(AES_Decrypt(das1.GetString(0), "encriptado"), AES_Decrypt(das1.GetString(1), "encriptado"), AES_Decrypt(das1.GetString(2), "encriptado"), das1.GetInt32(3), AES_Decrypt(das1.GetString(4), "encriptado"), AES_Decrypt(das1.GetString(5), "encriptado"))
-                    ' MsgBox(bez.nan)
-
                 End While
-            Else
-                'Errore mezua
-                MsgBox("Datu okerrak")
             End If
 
         Catch ex As Exception
@@ -230,9 +230,6 @@ Public Class WebForm6
         Dim sql As String
         sql = "SELECT DISTINCT(mota) FROM ostatuak WHERE upper(mota) Like upper('" & ddlMota.SelectedItem.Text.ToUpper & "') ORDER BY mota"
         taulaGehitu()
-
-        '  MotaDropDownGehitu(sql)
-
     End Sub
 
     Protected Sub imagebuttonbilatu_Click(sender As Object, e As ImageClickEventArgs) Handles imagebuttonbilatu.Click
@@ -291,9 +288,6 @@ Public Class WebForm6
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
         Try
             sartutakoBezeroa = Session("sartutakoBezeroa")
-            If sartutakoBezeroa.nan IsNot Nothing Then
-                MsgBox(sartutakoBezeroa.nan)
-            End If
         Catch ex As Exception
             ateraGonbidatua()
         End Try
@@ -309,6 +303,9 @@ Public Class WebForm6
             Session.Add("ostatuIzena", GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
             Session.Add("pertsonaTotala", ddlPertsonaKant.SelectedValue)
 
+            Session.Add("hasieraData", txtHasieraData.Text)
+            Session.Add("amaieraData", txtAmaieraData.Text)
+
             Response.Redirect("03_ErreserbatuOstatua.aspx")
         End If
 
@@ -321,25 +318,6 @@ Public Class WebForm6
         taulaGehitu()
 
     End Sub
-
-    'Protected Sub ImageButton2_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnHasiSaioa.Click
-    '    Response.Redirect("/01_SartuBezeroa.aspx")
-    'End Sub
-
-    'Protected Sub Calendar1_DayRender(sender As Object, e As DayRenderEventArgs) Handles txtHasieraData_CalendarExtender
-    '    quitarFechas(e)
-    'End Sub
-
-    'Protected Sub AmaieraCalendar_SelectionChanged(sender As Object, e As DayRenderEventArgs) Handles txtAmaieraData_CalendarExtender
-    '    quitarFechas(e)
-
-
-    Sub quitarFechas(e As DayRenderEventArgs)
-        If e.Day.Date < Now.Date Then
-            e.Day.IsSelectable = False
-        End If
-    End Sub
-
 
     Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera0.Click
         Response.Redirect("03_Mapa.aspx")
@@ -369,17 +347,12 @@ Public Class WebForm6
                 imgBtnDatuaIkusi.Visible = True
             End If
         Catch ex As Exception
-            MsgBox("Mal")
+
         End Try
     End Sub
 
     Protected Sub imgBtnDatuaIkusi_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnDatuaIkusi.Click
-        ' sartutakoBezeroa = Session("sartutakoBezeroa")
-        'Session.Add("sartutakoBezeroa", sartutakoBezeroa)
         Response.Redirect("03_BezeroDatuak.aspx")
     End Sub
 
-    Protected Sub ddlPertsonaKant_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlPertsonaKant.SelectedIndexChanged
-
-    End Sub
 End Class

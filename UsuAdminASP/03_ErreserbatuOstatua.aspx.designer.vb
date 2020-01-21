@@ -32,6 +32,15 @@ Partial Public Class WebForm4
     Protected WithEvents lblErreserbaOnartu As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control lblBezeroDatuak.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblBezeroDatuak As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control lblIzenaBez.
     '''</summary>
     '''<remarks>
@@ -120,6 +129,15 @@ Partial Public Class WebForm4
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblPrezioaErres As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lblOstatuDatuak.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblOstatuDatuak As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control lblHotela.
