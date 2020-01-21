@@ -50,7 +50,7 @@
 <body style ="background-image:url(Argazkiak/01_SartuBezeroa.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;">
     <form id="form1" runat="server">
         <div id="loginLaukia" style="align-content: center center; text-align: center center; margin: auto; background-color: #79553D; " class="auto-style8"  >
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">  &nbsp;&nbsp;&nbsp;&nbsp;
@@ -58,7 +58,7 @@
                     &nbsp;&nbsp;
                     </td>
                     <td class="auto-style5">&nbsp;
-                        <asp:TextBox ID="txtBezeroa" runat="server" Width="166px" BackColor="#F8ECD4" Height="20px">11111111</asp:TextBox>
+                        <asp:TextBox ID="txtBezeroa" runat="server" Width="166px" BackColor="#F8ECD4" Height="20px">12312312</asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +66,7 @@
                         <asp:Label ID="lblPasahitza" runat="server" Text="Pasahitza:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="#F8ECD4"></asp:Label>
                     </td>
                     <td class="auto-style7">&nbsp;
-                        <asp:TextBox ID="txtPasahitza" runat="server" Width="165px" TextMode="Password" BackColor="#F8ECD4" Height="20px">ADMIN</asp:TextBox>
+                        <asp:TextBox ID="txtPasahitza" runat="server" Width="165px" TextMode="Password" BackColor="#F8ECD4" Height="20px">12345</asp:TextBox>
                         &nbsp;<br />
                     </td>
                 </tr>

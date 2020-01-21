@@ -82,4 +82,8 @@ Public Class WebForm8
         Session.Add("sartutakoBezeroa", sartutakoBezeroa)
         Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
+
+    Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
+
+    End Sub
 End Class

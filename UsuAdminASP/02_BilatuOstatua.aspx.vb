@@ -20,6 +20,9 @@ Public Class WebForm6
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
+            For i As Integer = 1 To 30
+                ddlPertsonaKant.Items.Add(i)
+            Next
             imgBtnImage()
             ProbintziaKargatu()
             HerriaGuztiakKargatu()
@@ -39,7 +42,7 @@ Public Class WebForm6
             'SQL komandoa
             cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=@pass"
             Dim userencriptado = AES_Encrypt(gonbidatuNan, "encriptado")
-            Dim psswencriptado = AES_Encrypt("GONBIDATUA", "encriptado")
+            Dim psswencriptado = AES_Encrypt(gonbidatuIzena, "encriptado")
 
             'Erabiltzaile eremuko textua parametro bezala jarri
             cmd1.Parameters.AddWithValue("@user", userencriptado)
@@ -304,6 +307,7 @@ Public Class WebForm6
             Session.Add("sartutakoBezeroa", sartutakoBezeroa)
             Session.Add("ostatuaSignatura", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
             Session.Add("ostatuIzena", GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
+            Session.Add("pertsonaTotala", ddlPertsonaKant.SelectedValue)
 
             Response.Redirect("03_ErreserbatuOstatua.aspx")
         End If
@@ -373,5 +377,9 @@ Public Class WebForm6
         ' sartutakoBezeroa = Session("sartutakoBezeroa")
         'Session.Add("sartutakoBezeroa", sartutakoBezeroa)
         Response.Redirect("03_BezeroDatuak.aspx")
+    End Sub
+
+    Protected Sub ddlPertsonaKant_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlPertsonaKant.SelectedIndexChanged
+
     End Sub
 End Class

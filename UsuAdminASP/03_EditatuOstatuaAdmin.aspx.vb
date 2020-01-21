@@ -265,4 +265,8 @@ Public Class WebForm5
     Protected Sub txtMota_TextChanged(sender As Object, e As EventArgs) Handles txtMota.TextChanged
 
     End Sub
+
+    Protected Sub DDPertsonaTot_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DDPertsonaTot.SelectedIndexChanged
+
+    End Sub
 End Class

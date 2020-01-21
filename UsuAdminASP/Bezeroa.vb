@@ -18,6 +18,9 @@
         Me._izena = izena
 
     End Sub
+    Public Sub New(nan As String)
+        Me._nan = nan
+    End Sub
 
     Public Sub New()
     End Sub
