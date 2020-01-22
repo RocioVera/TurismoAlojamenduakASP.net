@@ -56,9 +56,6 @@ Public Class WebForm5
                                               das1.GetString(5), das1.GetString(6), das1.GetInt32(7), das1.GetDouble(8), das1.GetDouble(9),
                                               das1.GetString(10), das1.GetString(11), das1.GetString(12), das1.GetString(13), das1.GetInt32(14), das1.GetString(15))
                 End While
-            Else
-                'Errore mezua
-                MsgBox("Datu okerrak")
             End If
         Catch ex As Exception
             'Konexioa itxi
@@ -152,10 +149,7 @@ Public Class WebForm5
 
             If command.ExecuteNonQuery() = 1 Then
                 MsgBox("Aldaketak eginda")
-            Else
-                MsgBox("Zerbait txarto atera da")
             End If
-
         Catch ex As Exception
 
         Finally
@@ -191,7 +185,6 @@ Public Class WebForm5
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
 
@@ -222,7 +215,6 @@ Public Class WebForm5
 
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
 
@@ -244,7 +236,6 @@ Public Class WebForm5
 
             Dim dr As MySqlDataReader
             dr = cmd1.ExecuteReader
-            MsgBox(sql)
 
             While dr.Read
                 If (dr.Item(0) <> "HUTSIK") Then
@@ -254,7 +245,6 @@ Public Class WebForm5
 
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
     End Sub
@@ -262,13 +252,16 @@ Public Class WebForm5
     Protected Sub ddlProbintzia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlProbintzia.SelectedIndexChanged
         If ddlProbintzia.SelectedItem.Text <> "Probintzia" Then
             Dim sql As String
-            sql = "SELECT DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA ASC"
+            sql = "Select DISTINCT(HERRI_IZENA) FROM posta_kodeak WHERE upper(PROBINTZIA) Like '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY HERRI_IZENA ASC"
             HerriDropDownGehitu(sql)
             sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY herri_kodea ASC"
             HerriKodeakDropDownGehitu(sql)
+            sql = "SELECT DISTINCT(posta_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY posta_kodea ASC"
+            PostaKodeakDropDownGehitu(sql)
         Else
             HerriaGuztiakKargatu()
             HerriKodeGuztiakKargatu()
+            PostaKodeakGuztiakKargatu()
         End If
     End Sub
 
@@ -293,6 +286,8 @@ Public Class WebForm5
 
                 sql += "ORDER BY herri_kodea ASC"
                 HerriKodeakDropDownGehitu(sql)
+                sql = "SELECT DISTINCT(posta_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY posta_kodea ASC"
+                PostaKodeakDropDownGehitu(sql)
             Else
                 If ddlProbintzia.SelectedItem.Text <> "Probintzia" Then
                     sql += "SELECT DISTINCT(herri_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' "
@@ -301,11 +296,11 @@ Public Class WebForm5
                 End If
                 sql += " ORDER BY herri_kodea ASC"
                 HerriKodeakDropDownGehitu(sql)
+                sql = "SELECT DISTINCT(posta_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY posta_kodea ASC"
+                PostaKodeakDropDownGehitu(sql)
             End If
 
         End If
-        MsgBox(Sql)
-
     End Sub
 
     Private Sub HerriaGuztiakKargatu()
@@ -316,7 +311,10 @@ Public Class WebForm5
 
     Protected Sub ddlHerriKodea_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlHerriKodea.SelectedIndexChanged
         If ddlHerriKodea.SelectedItem.Text = "Herri kodeak" Then
-            HerriKodeGuztiakKargatu()
+            PostaKodeakGuztiakKargatu()
+        Else
+            Dim sql = "SELECT DISTINCT(posta_kodea) FROM posta_kodeak WHERE herri_kodea = '" & ddlHerriKodea.SelectedValue & "' ORDER BY posta_kodea ASC"
+            PostaKodeakDropDownGehitu(sql)
         End If
     End Sub
 
@@ -338,4 +336,7 @@ Public Class WebForm5
 
     End Sub
 
+    Protected Sub txtBDeskribapena_TextChanged(sender As Object, e As EventArgs) Handles txtBDeskribapena.TextChanged
+
+    End Sub
 End Class

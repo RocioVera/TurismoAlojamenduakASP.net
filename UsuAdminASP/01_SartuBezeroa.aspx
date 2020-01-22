@@ -2,9 +2,7 @@
 
 <!DOCTYPE html>
 <script runat="server">
-
     Protected Sub Page_Load(sender As Object, e As EventArgs)
-
     End Sub
 </script>
 
@@ -14,7 +12,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-
         .auto-style1 {
             width: 100%;
             height: 85px;

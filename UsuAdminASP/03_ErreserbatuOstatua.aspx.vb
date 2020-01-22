@@ -10,11 +10,8 @@ Public Class WebForm4
     Dim cnn1 As MySqlConnection
 
     Dim sartutakoBezeroa As New Bezeroa
-    Dim ostatuaSignatura As String
-    Dim ostatuIzena As String
-    Dim pertsonaTotala As String
+    Dim ostatuaSignatura, ostatuIzena, pertsonaTotala, hasieraData, amaieraData As String
     Dim erreserbaPrezioa As Double = 10.5
-    Dim hasieraData, amaieraData As Date
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Randomize()
@@ -32,7 +29,6 @@ Public Class WebForm4
             BezeroaAtera()
             lblPrezioaErres.Text = erreserbaPrezioa
         Catch ex As Exception
-            MsgBox(ex.Message)
         End Try
 
     End Sub
@@ -72,7 +68,6 @@ Public Class WebForm4
 
         Catch ex As Exception
             'Konexioa itxi
-            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -107,7 +102,6 @@ Public Class WebForm4
         Catch ex As Exception
             'Konexioa itxi
             cnn1.Close()
-            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -122,8 +116,8 @@ Public Class WebForm4
             Dim command As New MySqlCommand("INSERT INTO erreserbak(DATA_AMAIERA, DATA_HASIERA, ERRESERBA_PREZIO_TOT, PERTSONA_KANT_ERRES, OSTATUAK_ID_SIGNATURA, ERABILTZAILEAK_NAN) VALUES (@dataAmaiera, @dataHasiera, @erreserbaPrezioa, @pertsonaKant, @idSignatura, @erabiltzaileNan)", connection)
 
             'Erabiltzaile eremuko textua parametro bezala jarri
-            command.Parameters.Add("@dataAmaiera", MySqlDbType.Date).Value = amaieraData
-            command.Parameters.Add("@dataHasiera", MySqlDbType.Date).Value = hasieraData
+            command.Parameters.Add("@dataAmaiera", MySqlDbType.VarChar).Value = amaieraData
+            command.Parameters.Add("@dataHasiera", MySqlDbType.VarChar).Value = hasieraData
             command.Parameters.Add("@erreserbaPrezioa", MySqlDbType.Double).Value = erreserbaPrezioa
             command.Parameters.Add("@pertsonaKant", MySqlDbType.Int64).Value = pertsonaTotala
             command.Parameters.Add("@idSignatura", MySqlDbType.VarChar).Value = ostatuaSignatura
@@ -133,7 +127,7 @@ Public Class WebForm4
 
             Response.Redirect("02_BilatuOstatua.aspx")
         Catch ex As Exception
-            MsgBox(ex.Message)
+
         Finally
             connection.Close()
         End Try

@@ -33,10 +33,10 @@
         .auto-style8 {
             position: absolute;
             top: 6%;
-            left: 3%;
+            left: 18%;
             height: 585px;
             width: 968px;
-            right: 101px;
+            right: 148px;
         }
         .auto-style16 {
             height: 40px;

@@ -13,7 +13,7 @@
             left: 3%;
             height: 873px;
             width: 832px;
-            right: 399px;
+            right: 649px;
         }
 
         
@@ -60,42 +60,42 @@
                 <tr>
                     <td class="auto-style2" colspan="4" style="text-align: center">  
                         <asp:Label ID="lblSignatura" runat="server" Text="Signatura:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                    &nbsp;<asp:TextBox ID="txtSignaturaID" runat="server" Height="20px" Width="250px"></asp:TextBox>
+                    &nbsp;<asp:TextBox ID="txtSignaturaID" runat="server" Height="20px" Width="250px">50ff5</asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="4" style="text-align: center">  
                         <asp:Label ID="lblIzena" runat="server" Text="Izena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        &nbsp;<asp:TextBox ID="txtIzena" runat="server" Height="20px" Width="250px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtIzena" runat="server" Height="20px" Width="250px">szdgrg</asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style12">
                         <asp:Label ID="lblHelbidea" runat="server" Text="Helbidea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-&nbsp;<asp:TextBox ID="txtHelbidea" runat="server" Height="20px" Width="230px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtHelbidea" runat="server" Height="20px" Width="230px">c / sdgfdah</asp:TextBox>
                         </td>
                     <td class="auto-style13" colspan="2">
                         <asp:Label ID="lblEmail" runat="server" Text="Email:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtEmail" runat="server" Height="20px" Width="230px"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" Height="20px" Width="230px">rshgahgeh@gmail.com</asp:TextBox>
                         </td>
                     <td class="auto-style11">
                         <asp:Label ID="lblTelefonoa" runat="server" Text="Telefonoa:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtTelefonoa" runat="server" Height="20px" Width="230px"></asp:TextBox>
+                        <asp:TextBox ID="txtTelefonoa" runat="server" Height="20px" Width="230px">159753468</asp:TextBox>
                         </td>
                     </tr>
                 <tr>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblMota" runat="server" Text="Mota:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtMota" runat="server" Height="20px" Width="250px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtMota" runat="server" Height="20px" Width="250px">Casas Rurales</asp:TextBox>
                         &nbsp;</td>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblMarka" runat="server" Text="Marka:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtMarka" runat="server" Height="20px" Width="250px"></asp:TextBox>
+                        <asp:TextBox ID="txtMarka" runat="server" Height="20px" Width="250px">Montes y Valles vascos</asp:TextBox>
                         </td>
                     </tr>
                 <tr>
@@ -113,7 +113,7 @@
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblHerriak" runat="server" Text="Herriak:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-&nbsp;<asp:DropDownList ID="ddlHerria" runat="server" AutoPostBack="True" Width="151px" Height="30px">
+&nbsp;<asp:DropDownList ID="ddlHerria" runat="server" AutoPostBack="True" Width="151px" Height="30px" Enabled="False">
             <asp:ListItem>Herriak</asp:ListItem>
         </asp:DropDownList>
                         </td>
@@ -122,14 +122,14 @@
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblHerriKodea" runat="server" Text="Herri kodea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:DropDownList ID="ddlHerriKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px">
+                        &nbsp;<asp:DropDownList ID="ddlHerriKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px" Enabled="False">
             <asp:ListItem>Herri kodeak</asp:ListItem>
         </asp:DropDownList>
                         </td>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblPostaKodea" runat="server" Text="Posta kodea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-        <asp:DropDownList ID="ddlPostaKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px">
+        <asp:DropDownList ID="ddlPostaKodea" runat="server" AutoPostBack="True" Width="151px" Height="30px" Enabled="False">
             <asp:ListItem>Posta kodeak</asp:ListItem>
         </asp:DropDownList>
                         </td>
@@ -139,7 +139,7 @@
                         <asp:Label ID="lblDeskribapena" runat="server" Text="Deskribapena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         &nbsp;<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="txtBDeskribapena" runat="server" Height="95px" TextMode="MultiLine" Width="780px"></asp:TextBox>
+                        <asp:TextBox ID="txtBDeskribapena" runat="server" Height="95px" TextMode="MultiLine" Width="780px">dghafadhaerhhhae</asp:TextBox>
                         <br />
                         ______________________________________________________________________________________________________<br />
                     </td>
@@ -158,12 +158,12 @@
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblLatitudea" runat="server" Text="Latitudea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtLatitudea" runat="server" Height="20px" Width="250px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtLatitudea" runat="server" Height="20px" Width="250px">43,03067201</asp:TextBox>
                         </td>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblHerriKodea1" runat="server" Text="Longitudea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtLongitudea" runat="server" Height="20px" Width="250px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtLongitudea" runat="server" Height="20px" Width="250px">-2,96115583</asp:TextBox>
                         </td>
                 </tr>
                 <tr>
@@ -175,21 +175,21 @@
                     <td class="auto-style11" colspan="4">
                         <asp:Label ID="lblWebUrl" runat="server" Text="Web URL" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtWebUrl" runat="server" Height="20px" Width="782px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtWebUrl" runat="server" Height="20px" Width="782px">http://www.nekatur.net/iruaritz</asp:TextBox>
                         </td>
                 </tr>
                 <tr>
                     <td class="auto-style11" colspan="4">
                         <asp:Label ID="lblAdiskidetsuUrl" runat="server" Text="Adiskidetsu URL:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtAdiskidetsuUrl" runat="server" Height="20px" Width="782px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtAdiskidetsuUrl" runat="server" Height="20px" Width="782px">http://www.nekatur.net/iruaritz</asp:TextBox>
                         </td>
                 </tr>
                 <tr>
                     <td class="auto-style11" colspan="4">
                         <asp:Label ID="lblZipUrl" runat="server" Text="ZIP URL" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtZipUrl" runat="server" Height="20px" Width="782px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtZipUrl" runat="server" Height="20px" Width="782px">http://www.nekatur.net/iruaritz</asp:TextBox>
                         </td>
                 </tr>
                 <tr>

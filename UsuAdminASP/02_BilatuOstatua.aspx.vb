@@ -132,7 +132,6 @@ Public Class WebForm6
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
 
@@ -160,7 +159,6 @@ Public Class WebForm6
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
 
@@ -195,7 +193,6 @@ Public Class WebForm6
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
 
@@ -274,7 +271,6 @@ Public Class WebForm6
             Me.GridViewDatuak.DataBind()
 
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
 
         End Try
@@ -355,4 +351,7 @@ Public Class WebForm6
         Response.Redirect("03_BezeroDatuak.aspx")
     End Sub
 
+    Protected Sub ddlPertsonaKant_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlPertsonaKant.SelectedIndexChanged
+
+    End Sub
 End Class

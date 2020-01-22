@@ -7,7 +7,7 @@ Public Class WebForm1
 
     'Datu basearen datuak
     Dim server As String = "server=localhost;user=root;database=3262035_ostatuagrad;port=3306;"
-    '  Dim direccion As String = "server=kasserver.synology.me;database=reto_gp1;user id=gp1;port=3307; password=ZBlrkPWaSdVs5F3l;"
+    '  Dim direccion As String = "server=kasserver.synology.me;database=reto_gp1;user id=gp1;port=3307; password=ZBlrkPWaSdVs5F3l;"
     'SQL konexioa
     Dim cnn1 As MySqlConnection
 

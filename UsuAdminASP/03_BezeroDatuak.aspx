@@ -28,7 +28,7 @@
                 <asp:GridView ID="GridViewDatuak" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="96px" PageSize="25" Width="1328px" AllowPaging="True" EmptyDataText="Ez dituzu erreserbak egin, egizu bat eta bueltatu!!" Style="margin-left: 0px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" SelectText=""/>
+                        <asp:CommandField ShowSelectButton="True" SelectText="Ezabatu"/>
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

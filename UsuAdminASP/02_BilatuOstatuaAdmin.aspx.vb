@@ -46,7 +46,6 @@ Public Class WebForm2
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
 
@@ -74,7 +73,6 @@ Public Class WebForm2
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
     End Sub
@@ -109,7 +107,6 @@ Public Class WebForm2
             End While
             dr.Close()
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
         End Try
 
@@ -187,9 +184,7 @@ Public Class WebForm2
             Me.GridViewDatuak.DataBind()
 
         Catch ex As Exception
-            MsgBox(ex.ToString)
             cnn1.Close()
-
         End Try
     End Sub
 
@@ -200,15 +195,9 @@ Public Class WebForm2
     End Sub
 
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
-        'MsgBox("Value:" & GridViewDatuak.SelectedIndex)
         Session.Add("sartutakoBezeroa", sartutakoBezeroa)
         Session.Add("hautatutakoOstatua", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
-
-        '        MsgBox(GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
-
         Response.Redirect("03_EditatuOstatuaAdmin.aspx")
-
-        ' https://www.youtube.com/watch?v=qKcg9eCBh0M
     End Sub
 
     Protected Sub ddlHerria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlHerria.SelectedIndexChanged
