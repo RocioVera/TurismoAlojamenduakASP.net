@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm4
+Partial Public Class WebForm9
 
     '''<summary>
     '''Control form1.
@@ -104,13 +104,13 @@ Partial Public Class WebForm4
     Protected WithEvents lblPertsonaTot As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control lblPertsonaTotErres.
+    '''Control ddlPertsonaKant.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblPertsonaTotErres As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ddlPertsonaKant As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control lblPrezioa.
@@ -320,13 +320,31 @@ Partial Public Class WebForm4
     Protected WithEvents lblDataHasiera As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control lblHasieraData.
+    '''Control ScriptManager1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblHasieraData As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
+    '''Control txtHasieraData.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtHasieraData As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtHasieraData_CalendarExtender.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtHasieraData_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
 
     '''<summary>
     '''Control lblDataAmaiera.
@@ -338,13 +356,22 @@ Partial Public Class WebForm4
     Protected WithEvents lblDataAmaiera As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control lblAmaieradata.
+    '''Control txtAmaieraData.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblAmaieradata As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtAmaieraData As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtAmaieraData_CalendarExtender.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtAmaieraData_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
 
     '''<summary>
     '''Control btnAtzera.
@@ -356,11 +383,20 @@ Partial Public Class WebForm4
     Protected WithEvents btnAtzera As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''Control btnAtzera0.
+    '''Control btnDelete.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnAtzera0 As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents btnDelete As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''Control btnUpdate.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.ImageButton
 End Class

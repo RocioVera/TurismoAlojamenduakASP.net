@@ -127,8 +127,12 @@
     <Content Include="03_ErreserbatuOstatua.aspx" />
     <Content Include="03_Mapa.aspx" />
     <Content Include="03_BezeroDatuak.aspx" />
+    <Content Include="03_ErreserbaEditatu.aspx">
+      <BrowseToURL>~/03_ErreserbaEditatu.aspx</BrowseToURL>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Erreserba.vb" />
     <Compile Include="Ostatua.vb" />
     <Compile Include="Bezeroa.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -204,6 +208,13 @@
     </Compile>
     <Compile Include="03_BezeroDatuak.aspx.vb">
       <DependentUpon>03_BezeroDatuak.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="03_ErreserbaEditatu.aspx.designer.vb">
+      <DependentUpon>03_ErreserbaEditatu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="03_ErreserbaEditatu.aspx.vb">
+      <DependentUpon>03_ErreserbaEditatu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

@@ -148,7 +148,9 @@ Public Class WebForm5
             connection.Open()
 
             If command.ExecuteNonQuery() = 1 Then
-                MsgBox("Aldaketak eginda")
+                Response.Redirect("02_BilatuOstatuaAdmin.aspx")
+
+
             End If
         Catch ex As Exception
 
@@ -322,21 +324,5 @@ Public Class WebForm5
         Dim sql As String
         sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak ORDER BY herri_kodea ASC"
         HerriKodeakDropDownGehitu(sql)
-    End Sub
-
-    Protected Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
-
-    End Sub
-
-    Protected Sub txtIzena_TextChanged(sender As Object, e As EventArgs) Handles txtIzena.TextChanged
-
-    End Sub
-
-    Protected Sub txtMota_TextChanged(sender As Object, e As EventArgs) Handles txtMota.TextChanged
-
-    End Sub
-
-    Protected Sub txtBDeskribapena_TextChanged(sender As Object, e As EventArgs) Handles txtBDeskribapena.TextChanged
-
     End Sub
 End Class

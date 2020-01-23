@@ -55,8 +55,6 @@ Public Class WebForm1
         Catch ex As Exception
             'Konexioa itxi
             cnn1.Close()
-            MsgBox(ex.Message)
-
         End Try
     End Sub
 

@@ -1,4 +1,6 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="03_ErreserbatuOstatua.aspx.vb" Inherits="UsuAdminASP.WebForm4" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="03_ErreserbaEditatu.aspx.vb" Inherits="UsuAdminASP.WebForm9" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 
 <!DOCTYPE html>
 
@@ -34,17 +36,28 @@
             position: absolute;
             top: 6%;
             left: 18%;
-            height: 689px;
-            width: 969px;
-            right: 283px;
+            height: 745px;
+            width: 964px;
+            right: 154px;
         }
         .auto-style16 {
             height: 40px;
             margin-left: 200px;
         }
+        .auto-style17 {
+            margin-right: 1px;
+        }
+        .auto-style18 {
+            height: 42px;
+            margin-left: 40px;
+            width: 102px;
+        }
+        .auto-style19 {
+            width: 102px;
+        }
         </style>
 </head>
-<body style ="        background-image: url(Argazkiak/03_ErreserbatuOstatua.jpg);
+<body style ="background-image: url(Argazkiak/03_ErreserbatuOstatua.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center center;
@@ -62,7 +75,7 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2" colspan="6" style="text-align: center">  
-                        <asp:Label ID="lblErreserbaOnartu" runat="server" ForeColor="White" Height="36px" style="font-size: xx-large; font-weight: 700; margin-bottom: 0px;" Text="Erreserba datuak:" Width="283px" ></asp:Label>
+                        <asp:Label ID="lblErreserbaOnartu" runat="server" ForeColor="White" Height="36px" style="font-size: xx-large; font-weight: 700; margin-bottom: 0px;" Text="Erreserba datuak aldatu:" Width="947px" CssClass="auto-style17" ></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -97,7 +110,8 @@
                     </td>
                     <td class="auto-style3" colspan="3">  
                         <asp:Label ID="lblPertsonaTot" runat="server" Text="Pertsona totala:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        <asp:Label ID="lblPertsonaTotErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
+                        &nbsp;<asp:DropDownList ID="ddlPertsonaKant" runat="server" Height="25px" Width="58px" AutoPostBack="True">
+        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -143,7 +157,7 @@
                         </td>
                     </tr>
                 <tr>
-                    <td class="auto-style3" colspan="2">
+                    <td class="auto-style18" colspan="2">
                         &nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblHelbidea" runat="server" Text="Helbidea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <asp:Label ID="lblHelbideaErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
@@ -159,7 +173,7 @@
                         </td>
                     </tr>
                 <tr>
-                    <td class="auto-style3" colspan="2">
+                    <td class="auto-style18" colspan="2">
                         &nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblMota" runat="server" Text="Mota:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <asp:Label ID="lblMotaErres" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
@@ -188,20 +202,33 @@
                     <td class="auto-style3" colspan="3">  
                         &nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblDataHasiera" runat="server" Text="Hasiera data:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        <asp:Label ID="lblHasieraData" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
+                              <asp:ScriptManager 
+                                ID="ScriptManager1"
+                                runat="server" >
+                             </asp:ScriptManager>
+                        &nbsp;<asp:TextBox ID="txtHasieraData" runat="server" Width="186px" Height="16px"></asp:TextBox>
+            <ajaxToolkit:CalendarExtender ID="txtHasieraData_CalendarExtender" runat="server" BehaviorID="txtHasieraData_CalendarExtender" TargetControlID="txtHasieraData"  PopupButtonID="imgBtnHasiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
+            </ajaxToolkit:CalendarExtender>
                     </td>
                     <td class="auto-style3" colspan="3">  
                         <asp:Label ID="lblDataAmaiera" runat="server" Text="Amaiera data:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        <asp:Label ID="lblAmaieradata" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="13pt" ForeColor="Black"></asp:Label>
+                        &nbsp;<asp:TextBox ID="txtAmaieraData" runat="server" Width="159px" Height="16px"></asp:TextBox>
+            <ajaxToolkit:CalendarExtender ID="txtAmaieraData_CalendarExtender" runat="server" BehaviorID="txtAmaieraData_CalendarExtender" TargetControlID="txtAmaieraData"   PopupButtonID="imgBtnAmaiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
+            </ajaxToolkit:CalendarExtender>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style11" colspan="3" aria-orientation="horizontal" style="text-align: right">
+                    <td class="auto-style2" colspan="6" style="text-align: center">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style19" colspan="2" aria-orientation="horizontal" style="text-align: center">
                         <asp:ImageButton ID="btnAtzera" runat="server" Height="47px" ImageUrl="~/Argazkiak/03_erreserbatuEz.png" Width="54px" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
-                    <td class="auto-style11" colspan="3" aria-orientation="horizontal" style="text-align: left">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<asp:ImageButton ID="btnAtzera0" runat="server" Height="53px" ImageUrl="~/Argazkiak/03_erreserbatuBai.png" Width="56px" />
+                    <td class="auto-style11" colspan="2" aria-orientation="horizontal" style="text-align: center">
+                        <asp:ImageButton ID="btnDelete" runat="server" Height="53px" ImageUrl="~/Argazkiak/papelera.png" Width="56px" />
+                        </td>
+                    <td class="auto-style11" colspan="2" aria-orientation="horizontal" style="text-align: center">
+                        <asp:ImageButton ID="btnUpdate" runat="server" Height="53px" ImageUrl="~/Argazkiak/03_erreserbatuBai.png" Width="56px" />
                         </td>
                 </tr>
             </table>

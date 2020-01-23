@@ -31,7 +31,7 @@ Public Class WebForm8
             Dim cmd2 As New MySqlCommand
 
             'sql komandoa idazten da
-            sql = "SELECT DISTINCT o.ostatu_izena, o.ostatu_helbidea, e.id_erreserba, e.data_amaiera, e.data_hasiera, e.erreserba_prezio_tot, e.pertsona_kant_erres FROM erreserbak e, ostatuak o WHERE e.erabiltzaileak_nan = '" + AES_Encrypt(sartutakoBezeroa.nan, "encriptado") + "' AND o.id_signatura = e.ostatuak_id_signatura"
+            sql = "SELECT DISTINCT e.id_erreserba, o.ostatu_izena, o.ostatu_helbidea, e.id_erreserba, e.data_amaiera, e.data_hasiera, e.erreserba_prezio_tot, e.pertsona_kant_erres FROM erreserbak e, ostatuak o WHERE e.erabiltzaileak_nan = '" + AES_Encrypt(sartutakoBezeroa.nan, "encriptado") + "' AND o.id_signatura = e.ostatuak_id_signatura"
 
             cmd2 = New MySqlCommand(sql, cnn1)
             adapter = New MySqlDataAdapter(cmd2)
@@ -67,9 +67,6 @@ Public Class WebForm8
     End Function
 
     Protected Sub imgBtnAtzera1_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera.Click
-        'Dim sartutakoBezeroa As String = Session("sartutakoBezeroa")
-
-        'Session.Add("sartutakoBezeroa", sartutakoBezeroa)
         Response.Redirect("02_BilatuOstatua.aspx")
     End Sub
 
@@ -82,26 +79,8 @@ Public Class WebForm8
     End Sub
 
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
-        Dim connection As New MySqlConnection(server)
-
-        Try
-            Dim command As New MySqlCommand("Delete `ostatuak` SET `ostatu_izena`=@izena, `deskribapena`=@deskribapena, ostatu_helbidea=@helbidea,
-            `marka`=@marka,`ostatu_email`=@email, `ostatu_telefonoa`=@telefonoa, `pertsona_tot`=@pertsonaTot,latitude=@latitude,
-            `longitude`=@longitude, `mota`=@mota,`web_url`=@webUrl,`adiskidetsu_url`=@adiskidetsuUrl, `zip_url`=@zipUrl,
-            `posta_kodea`=@postaKodea, `herri_kodea`=@herriKodea WHERE `id_signatura` = @idSignatura", connection)
-
-            'Erabiltzaile eremuko textua parametro bezala jarri
-            '       command.Parameters.Add("@izena", MySqlDbType.VarChar).Value = txtIzena.Text.ToUpper
-
-            connection.Open()
-
-            If command.ExecuteNonQuery() = 1 Then
-                MsgBox("Aldaketak eginda")
-            End If
-        Catch ex As Exception
-
-        Finally
-            connection.Close()
-        End Try
+        Session.Add("aldaErreserba", GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
+        MsgBox(GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
+        Response.Redirect("03_ErreserbaEditatu.aspx")
     End Sub
 End Class

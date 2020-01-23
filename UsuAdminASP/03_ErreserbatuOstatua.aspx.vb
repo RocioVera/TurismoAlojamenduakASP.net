@@ -14,21 +14,24 @@ Public Class WebForm4
     Dim erreserbaPrezioa As Double = 10.5
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Randomize()
-        erreserbaPrezioa = CInt(Int((Rnd() * 300.0) + 80.0))
+       
         Try
             ostatuaSignatura = Session("ostatuaSignatura")
             ostatuIzena = Session("ostatuIzena")
             sartutakoBezeroa = Session("sartutakoBezeroa")
-            pertsonaTotala = CInt(Session("pertsonaTotala"))
+            pertsonaTotala = Session("pertsonaTotala")
+            Randomize()
+            erreserbaPrezioa = CInt(Int((Rnd() * 300.0) + 80.0)) * pertsonaTotala
             hasieraData = Session("hasieraData")
             amaieraData = Session("amaieraData")
-
+            lblAmaieradata.Text = amaieraData
+            lblHasieraData.Text = hasieraData
             lblPertsonaTotErres.Text = pertsonaTotala
             ostatuaAtera()
             BezeroaAtera()
             lblPrezioaErres.Text = erreserbaPrezioa
         Catch ex As Exception
+
         End Try
 
     End Sub

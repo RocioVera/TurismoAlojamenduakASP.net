@@ -12,9 +12,9 @@
             position: absolute;
             top: 6%;
             left: 3%;
-            height: 873px;
-            width: 832px;
-            right: 399px;
+            height: 914px;
+            width: 834px;
+            right: 489px;
         }
 
         

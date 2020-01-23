@@ -262,8 +262,6 @@ Public Class WebForm3
 
     End Sub
 
-
-
     Private Sub HerriKodeGuztiakKargatu()
         Dim sql As String
         sql = "SELECT DISTINCT(herri_kodea) FROM posta_kodeak ORDER BY herri_kodea ASC"
