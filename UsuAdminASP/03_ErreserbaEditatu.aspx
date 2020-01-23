@@ -75,7 +75,7 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2" colspan="6" style="text-align: center">  
-                        <asp:Label ID="lblErreserbaOnartu" runat="server" ForeColor="White" Height="36px" style="font-size: xx-large; font-weight: 700; margin-bottom: 0px;" Text="Erreserba datuak aldatu:" Width="947px" CssClass="auto-style17" ></asp:Label>
+                        <asp:Label ID="lblErreserbaOnartu" runat="server" ForeColor="#FFF6EF" Height="36px" style="font-size: xx-large; font-weight: 700; margin-bottom: 0px;" Text="Erreserba datuak aldatu:" Width="947px" CssClass="auto-style17" ></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -206,13 +206,13 @@
                                 ID="ScriptManager1"
                                 runat="server" >
                              </asp:ScriptManager>
-                        &nbsp;<asp:TextBox ID="txtHasieraData" runat="server" Width="186px" Height="16px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtHasieraData" runat="server" Width="186px" Height="16px" BackColor="#FFF6EF"></asp:TextBox>
             <ajaxToolkit:CalendarExtender ID="txtHasieraData_CalendarExtender" runat="server" BehaviorID="txtHasieraData_CalendarExtender" TargetControlID="txtHasieraData"  PopupButtonID="imgBtnHasiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
             </ajaxToolkit:CalendarExtender>
                     </td>
                     <td class="auto-style3" colspan="3">  
                         <asp:Label ID="lblDataAmaiera" runat="server" Text="Amaiera data:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        &nbsp;<asp:TextBox ID="txtAmaieraData" runat="server" Width="159px" Height="16px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtAmaieraData" runat="server" Width="159px" Height="16px" BackColor="#FFF6EF"></asp:TextBox>
             <ajaxToolkit:CalendarExtender ID="txtAmaieraData_CalendarExtender" runat="server" BehaviorID="txtAmaieraData_CalendarExtender" TargetControlID="txtAmaieraData"   PopupButtonID="imgBtnAmaiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
             </ajaxToolkit:CalendarExtender>
                     </td>

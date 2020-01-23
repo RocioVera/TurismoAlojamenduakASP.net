@@ -62,7 +62,7 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2" colspan="6" style="text-align: center">  
-                        <asp:Label ID="lblErreserbaOnartu" runat="server" ForeColor="White" Height="36px" style="font-size: xx-large; font-weight: 700; margin-bottom: 0px;" Text="Erreserba datuak:" Width="283px" ></asp:Label>
+                        <asp:Label ID="lblErreserbaOnartu" runat="server" ForeColor="#FFF6EF" Height="36px" style="font-size: xx-large; font-weight: 700; margin-bottom: 0px;" Text="Erreserba datuak:" Width="283px" ></asp:Label>
                     </td>
                 </tr>
                 <tr>
