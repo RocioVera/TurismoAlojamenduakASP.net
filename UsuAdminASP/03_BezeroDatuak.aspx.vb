@@ -83,4 +83,9 @@ Public Class WebForm8
         MsgBox(GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
         Response.Redirect("03_ErreserbaEditatu.aspx")
     End Sub
+
+    Protected Sub GridViewDatuak_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles GridViewDatuak.PageIndexChanging
+        GridViewDatuak.PageIndex = e.NewPageIndex
+        taulaGehitu()
+    End Sub
 End Class

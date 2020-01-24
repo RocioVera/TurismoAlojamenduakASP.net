@@ -487,18 +487,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm2._ImageButton1">
+<member name="F:UsuAdminASP.WebForm2._ImgBtnAtzera">
 <summary>
-Control ImageButton1.
+Control ImgBtnAtzera.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm2._imgBtnAtzera0">
+<member name="F:UsuAdminASP.WebForm2._imgBtnMaps">
 <summary>
-Control imgBtnAtzera0.
+Control imgBtnMaps.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -955,9 +955,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:UsuAdminASP.WebForm6._imgBtnAtzera0">
+<member name="F:UsuAdminASP.WebForm6._imgBtnMaps">
 <summary>
-Control imgBtnAtzera0.
+Control imgBtnMaps.
 </summary>
 <remarks>
 Campo generado automáticamente.

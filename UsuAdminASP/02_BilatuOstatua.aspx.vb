@@ -288,22 +288,27 @@ Public Class WebForm6
             ateraGonbidatua()
         End Try
 
-        If sartutakoBezeroa.nan.Equals(gonbidatuNan) Then
-            Dim erantzuna = MsgBox("Erreserbatzeko logeatuta egon behar zara, hasi nahi duzu saioa?", vbYesNo, "Logeatu!!!")
-            If erantzuna = vbYes Then    ' User chose Yes.
-                Response.Redirect("01_SartuBezeroa.aspx")
+        Try
+            If sartutakoBezeroa.nan.Equals(gonbidatuNan) Then
+                Dim erantzuna = MsgBox("Erreserbatzeko logeatuta egon behar zara, hasi nahi duzu saioa?", vbYesNo, "Logeatu!!!")
+                If erantzuna = vbYes Then    ' User chose Yes.
+                    Response.Redirect("01_SartuBezeroa.aspx")
+                End If
+            Else
+                Session.Add("sartutakoBezeroa", sartutakoBezeroa)
+                Session.Add("ostatuaSignatura", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
+                Session.Add("ostatuIzena", GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
+                Session.Add("pertsonaTotala", ddlPertsonaKant.SelectedValue)
+
+                Session.Add("hasieraData", txtHasieraData.Text)
+                Session.Add("amaieraData", txtAmaieraData.Text)
+
+                Response.Redirect("03_ErreserbatuOstatua.aspx")
             End If
-        Else
-            Session.Add("sartutakoBezeroa", sartutakoBezeroa)
-            Session.Add("ostatuaSignatura", GridViewDatuak.SelectedRow.Cells(5).Text.ToString())
-            Session.Add("ostatuIzena", GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
-            Session.Add("pertsonaTotala", ddlPertsonaKant.SelectedValue)
 
-            Session.Add("hasieraData", txtHasieraData.Text)
-            Session.Add("amaieraData", txtAmaieraData.Text)
+        Catch ex As Exception
 
-            Response.Redirect("03_ErreserbatuOstatua.aspx")
-        End If
+        End Try
 
     End Sub
 
@@ -315,7 +320,7 @@ Public Class WebForm6
 
     End Sub
 
-    Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera0.Click
+    Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnMaps.Click
         Response.Redirect("03_Mapa.aspx")
     End Sub
 
@@ -354,4 +359,10 @@ Public Class WebForm6
     Protected Sub ddlPertsonaKant_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlPertsonaKant.SelectedIndexChanged
 
     End Sub
+
+    Protected Sub GridViewDatuak_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles GridViewDatuak.PageIndexChanging
+        GridViewDatuak.PageIndex = e.NewPageIndex
+        taulaGehitu()
+    End Sub
+
 End Class

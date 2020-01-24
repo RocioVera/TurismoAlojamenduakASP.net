@@ -190,7 +190,7 @@ Public Class WebForm2
 
 
 
-    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
+    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImgBtnAtzera.Click
         Response.Redirect("01_SartuBezeroa.aspx")
     End Sub
 
@@ -214,7 +214,12 @@ Public Class WebForm2
 
     End Sub
 
-    Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnAtzera0.Click
+    Protected Sub imgBtnAtzera0_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnMaps.Click
         Response.Redirect("03_Mapa.aspx")
+    End Sub
+
+    Protected Sub GridViewDatuak_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles GridViewDatuak.PageIndexChanging
+        GridViewDatuak.PageIndex = e.NewPageIndex
+        taulaGehitu()
     End Sub
 End Class
