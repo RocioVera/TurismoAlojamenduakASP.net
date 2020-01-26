@@ -260,6 +260,11 @@ Public Class WebForm5
             HerriKodeakDropDownGehitu(sql)
             sql = "SELECT DISTINCT(posta_kodea) FROM posta_kodeak WHERE upper(PROBINTZIA) LIKE '" & ddlProbintzia.SelectedItem.Text.ToUpper & "' ORDER BY posta_kodea ASC"
             PostaKodeakDropDownGehitu(sql)
+
+
+
+
+
         Else
             HerriaGuztiakKargatu()
             HerriKodeGuztiakKargatu()

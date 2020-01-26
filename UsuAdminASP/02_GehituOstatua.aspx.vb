@@ -71,7 +71,6 @@ Public Class WebForm3
             txtZipUrl.Text <> "" And ddlHerriKodea.SelectedIndex <> 0 And ddlPostaKodea.SelectedIndex <> 0 And
             ddlProbintzia.SelectedIndex <> 0 And ddlHerria.SelectedIndex <> 0 And txtSignaturaID.Text <> "") Then
 
-
             Dim connection As New MySqlConnection(server)
 
             Try

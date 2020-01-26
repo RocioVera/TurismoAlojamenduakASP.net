@@ -62,11 +62,13 @@
         </asp:ScriptManager>
             <asp:TextBox ID="txtHasieraData" runat="server" Width="100px" Height="16px" BackColor="#FFF6EF"></asp:TextBox>
             <ajaxToolkit:CalendarExtender ID="txtHasieraData_CalendarExtender" runat="server" BehaviorID="txtHasieraData_CalendarExtender" TargetControlID="txtHasieraData"  PopupButtonID="imgBtnHasiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
-            </ajaxToolkit:CalendarExtender>
+                
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </ajaxToolkit:CalendarExtender>
             &nbsp;
             <asp:TextBox ID="txtAmaieraData" runat="server" Width="100px" Height="16px" BackColor="#FFF6EF"></asp:TextBox>
             <ajaxToolkit:CalendarExtender ID="txtAmaieraData_CalendarExtender" runat="server" BehaviorID="txtAmaieraData_CalendarExtender" TargetControlID="txtAmaieraData"   PopupButtonID="imgBtnAmaiera" PopupPosition="BottomLeft" Format="yyyy-MM-dd">
-            </ajaxToolkit:CalendarExtender>
+                
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </ajaxToolkit:CalendarExtender>
             &nbsp;<asp:Label ID="lblPertsonaTot" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="13pt" ForeColor="Black" BackColor="#FFF6EF">Pertsona totalak:</asp:Label>
                     &nbsp;<asp:DropDownList ID="ddlPertsonaKant" runat="server" Height="25px" Width="58px" AutoPostBack="True" BackColor="#FFF6EF">
         </asp:DropDownList>
