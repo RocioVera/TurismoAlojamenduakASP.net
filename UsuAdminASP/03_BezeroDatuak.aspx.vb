@@ -43,7 +43,6 @@ Public Class WebForm8
 
         Catch ex As Exception
             cnn1.Close()
-
         End Try
     End Sub
 
@@ -80,7 +79,6 @@ Public Class WebForm8
 
     Protected Sub GridViewDatuak_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDatuak.SelectedIndexChanged
         Session.Add("aldaErreserba", GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
-        MsgBox(GridViewDatuak.SelectedRow.Cells(1).Text.ToString())
         Response.Redirect("03_ErreserbaEditatu.aspx")
     End Sub
 
