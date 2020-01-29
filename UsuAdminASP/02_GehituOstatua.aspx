@@ -60,42 +60,42 @@
                 <tr>
                     <td class="auto-style2" colspan="4" style="text-align: center">  
                         <asp:Label ID="lblSignatura" runat="server" Text="Signatura:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                    &nbsp;<asp:TextBox ID="txtSignaturaID" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF">50ff5</asp:TextBox>
+                    &nbsp;<asp:TextBox ID="txtSignaturaID" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF" MaxLength="10"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="4" style="text-align: center">  
                         <asp:Label ID="lblIzena" runat="server" Text="Izena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
-                        &nbsp;<asp:TextBox ID="txtIzena" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF">szdgrg</asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtIzena" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF" MaxLength="50"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style12">
                         <asp:Label ID="lblHelbidea" runat="server" Text="Helbidea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-&nbsp;<asp:TextBox ID="txtHelbidea" runat="server" Height="20px" Width="230px" BackColor="#FFF6EF">c / sdgfdah</asp:TextBox>
+&nbsp;<asp:TextBox ID="txtHelbidea" runat="server" Height="20px" Width="230px" BackColor="#FFF6EF" MaxLength="200"></asp:TextBox>
                         </td>
                     <td class="auto-style13" colspan="2">
                         <asp:Label ID="lblEmail" runat="server" Text="Email:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtEmail" runat="server" Height="20px" Width="230px" BackColor="#FFF6EF">rshgahgeh@gmail.com</asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" Height="20px" Width="230px" BackColor="#FFF6EF" MaxLength="100"></asp:TextBox>
                         </td>
                     <td class="auto-style11">
                         <asp:Label ID="lblTelefonoa" runat="server" Text="Telefonoa:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtTelefonoa" runat="server" Height="20px" Width="230px" BackColor="#FFF6EF">159753468</asp:TextBox>
+                        <asp:TextBox ID="txtTelefonoa" runat="server" Height="20px" Width="230px" BackColor="#FFF6EF" MaxLength="12"></asp:TextBox>
                         </td>
                     </tr>
                 <tr>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblMota" runat="server" Text="Mota:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtMota" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF">Casas Rurales</asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtMota" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF" MaxLength="25"></asp:TextBox>
                         &nbsp;</td>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblMarka" runat="server" Text="Marka:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtMarka" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF">Montes y Valles vascos</asp:TextBox>
+                        <asp:TextBox ID="txtMarka" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF" MaxLength="500"></asp:TextBox>
                         </td>
                     </tr>
                 <tr>
@@ -139,7 +139,7 @@
                         <asp:Label ID="lblDeskribapena" runat="server" Text="Deskribapena:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         &nbsp;<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="txtBDeskribapena" runat="server" Height="95px" TextMode="MultiLine" Width="780px" BackColor="#FFF6EF">dghafadhaerhhhae</asp:TextBox>
+                        <asp:TextBox ID="txtBDeskribapena" runat="server" Height="95px" TextMode="MultiLine" Width="780px" BackColor="#FFF6EF" MaxLength="2000"></asp:TextBox>
                         <br />
                         ______________________________________________________________________________________________________<br />
                     </td>
@@ -158,12 +158,12 @@
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblLatitudea" runat="server" Text="Latitudea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtLatitudea" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF">43,03067201</asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtLatitudea" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF"></asp:TextBox>
                         </td>
                     <td class="auto-style11" colspan="2">
                         <asp:Label ID="lblHerriKodea1" runat="server" Text="Longitudea:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtLongitudea" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF">-2,96115583</asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtLongitudea" runat="server" Height="20px" Width="250px" BackColor="#FFF6EF"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
@@ -175,21 +175,21 @@
                     <td class="auto-style11" colspan="4">
                         <asp:Label ID="lblWebUrl" runat="server" Text="Web URL" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtWebUrl" runat="server" Height="20px" Width="782px" BackColor="#FFF6EF">http://www.nekatur.net/iruaritz</asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtWebUrl" runat="server" Height="20px" Width="782px" BackColor="#FFF6EF" MaxLength="1500"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
                     <td class="auto-style11" colspan="4">
                         <asp:Label ID="lblAdiskidetsuUrl" runat="server" Text="Adiskidetsu URL:" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtAdiskidetsuUrl" runat="server" Height="20px" Width="782px" BackColor="#FFF6EF">http://www.nekatur.net/iruaritz</asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtAdiskidetsuUrl" runat="server" Height="20px" Width="782px" BackColor="#FFF6EF" MaxLength="1500"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
                     <td class="auto-style11" colspan="4">
                         <asp:Label ID="lblZipUrl" runat="server" Text="ZIP URL" Font-Bold="True" Font-Italic="True" Font-Size="15pt" ForeColor="Blue"></asp:Label>
                         <br />
-                        &nbsp;<asp:TextBox ID="txtZipUrl" runat="server" Height="20px" Width="782px" BackColor="#FFF6EF">http://www.nekatur.net/iruaritz</asp:TextBox>
+                        &nbsp;<asp:TextBox ID="txtZipUrl" runat="server" Height="20px" Width="782px" BackColor="#FFF6EF" MaxLength="1500"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>

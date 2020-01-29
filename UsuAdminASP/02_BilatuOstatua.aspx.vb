@@ -44,10 +44,10 @@ Public Class WebForm6
             cnn1.Open()
             'Konexioarekin komandoa egin
             Dim cmd1 = cnn1.CreateCommand()
-            'SQL komandoa
-            cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=@pass"
             Dim userencriptado = AES_Encrypt(gonbidatuNan, "encriptado")
             Dim psswencriptado = AES_Encrypt(gonbidatuIzena, "encriptado")
+            'SQL komandoa
+            cmd1.CommandText = "SELECT nan, erabil_izena, abizenak, baimena, erabil_email, erabil_telefono FROM Erabiltzaileak WHERE nan = @user AND pasahitza=@pass"
 
             'Erabiltzaile eremuko textua parametro bezala jarri
             cmd1.Parameters.AddWithValue("@user", userencriptado)
@@ -288,6 +288,10 @@ Public Class WebForm6
             ateraGonbidatua()
         End Try
 
+        If sartutakoBezeroa Is Nothing Then
+            ateraGonbidatua()
+        End If
+
         Try
             If sartutakoBezeroa.nan.Equals(gonbidatuNan) Then
                 Dim erantzuna = MsgBox("Erreserbatzeko logeatuta egon behar zara, hasi nahi duzu saioa?", vbYesNo, "Logeatu!!!")
@@ -307,7 +311,6 @@ Public Class WebForm6
             End If
 
         Catch ex As Exception
-
         End Try
 
     End Sub
@@ -354,10 +357,6 @@ Public Class WebForm6
 
     Protected Sub imgBtnDatuaIkusi_Click(sender As Object, e As ImageClickEventArgs) Handles imgBtnDatuaIkusi.Click
         Response.Redirect("03_BezeroDatuak.aspx")
-    End Sub
-
-    Protected Sub ddlPertsonaKant_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlPertsonaKant.SelectedIndexChanged
-
     End Sub
 
     Protected Sub GridViewDatuak_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles GridViewDatuak.PageIndexChanging
